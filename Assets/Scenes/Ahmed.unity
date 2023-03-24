@@ -238,7 +238,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHead: {fileID: 896525071}
-  moveSpeed: 5
+  animator: {fileID: 526559366}
+  moveSpeed: 4
   jumpForce: 4
   lookSensetivey: 1
   rightStickHorizontal: RightStickHorizontal
@@ -264,6 +265,11 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.8, z: 0}
+--- !u!95 &526559366 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: bee17d7d06ced294887c47fc5f5a975c, type: 3}
+  m_PrefabInstance: {fileID: 896525070}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &726560115
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +418,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: bee17d7d06ced294887c47fc5f5a975c, type: 3}
       propertyPath: m_Name
       value: Ch46_nonPBR
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: bee17d7d06ced294887c47fc5f5a975c, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 798120c4a7b56744181fbd7aba30f8a9, type: 2}
+    - target: {fileID: 5866666021909216657, guid: bee17d7d06ced294887c47fc5f5a975c, type: 3}
+      propertyPath: m_UpdateMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: bee17d7d06ced294887c47fc5f5a975c, type: 3}
+      propertyPath: m_WarningMessage
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bee17d7d06ced294887c47fc5f5a975c, type: 3}

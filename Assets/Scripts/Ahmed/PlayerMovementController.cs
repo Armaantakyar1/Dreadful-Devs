@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerMovementController : MonoBehaviour
 {
     [SerializeField] Transform playerHead;
+    [SerializeField] Animator animator;
 
     [SerializeField] float moveSpeed;
     [SerializeField] float jumpForce;
@@ -37,6 +38,7 @@ public class PlayerMovementController : MonoBehaviour
         RotationControll();
         MoveControll();
         Jump();
+        PlayerAnimation();
     }
 
     private void FixedUpdate()
@@ -86,6 +88,24 @@ public class PlayerMovementController : MonoBehaviour
             {
                 movementDirection.y = jumpForce;
             }
+        }
+    }
+    void PlayerAnimation()
+    {
+        if (movementDirection.z > 0)
+        {
+            animator.SetBool("isMovingBackward", false);
+            animator.SetBool("isMovingForward", true);
+        }
+        else if (movementDirection.z < 0)
+        {
+            animator.SetBool("isMovingBackward", true);
+            animator.SetBool("isMovingForward", false);
+        }
+        else
+        {
+            animator.SetBool("isMovingBackward", false);
+            animator.SetBool("isMovingForward", false);
         }
     }
 }
