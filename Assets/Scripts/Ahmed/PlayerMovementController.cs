@@ -8,14 +8,23 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] Transform playerHead;
 
     [SerializeField] float moveSpeed;
+    [SerializeField] float jumpForce;
     [SerializeField] float lookSensetivey;
+    float yStore;
 
-    [SerializeField] string horizontal;
-    [SerializeField] string vertical;
+    [Header("Joystick Mapping")]
+    [SerializeField] string rightStickHorizontal;
+    [SerializeField] string rightStickVertical;
+
+    [SerializeField] string leftStickHorizontal;
+    [SerializeField] string leftStickVertical;
+    [SerializeField] string jump;
 
     CharacterController charCon;
 
-    Vector2 stickInput;
+    Vector2 rightStickInput;
+    Vector3 movementDirection;
+
     float verticalRotStore;
 
     private void Awake()
@@ -27,29 +36,56 @@ public class PlayerMovementController : MonoBehaviour
     {
         RotationControll();
         MoveControll();
+        Jump();
     }
 
-
+    private void FixedUpdate()
+    {
+        if(!charCon.isGrounded)
+        {
+            movementDirection.y = movementDirection.y + (Physics.gravity.y * Time.fixedDeltaTime);
+        }
+        else
+        {
+            movementDirection.y = Physics.gravity.y * Time.fixedDeltaTime;
+            
+        }
+    }
 
     void RotationControll()
     {
-        stickInput.x = Input.GetAxis(horizontal);
-        stickInput.y = Input.GetAxis(vertical);
+        rightStickInput.x = Input.GetAxisRaw(rightStickHorizontal);
+        rightStickInput.y = Input.GetAxisRaw(rightStickVertical);
 
-        transform.Rotate(Vector3.up, stickInput.x * lookSensetivey);
+        transform.Rotate(Vector3.up, rightStickInput.x * lookSensetivey);
 
 
-        float verticalRotation = stickInput.y * lookSensetivey;
+        float verticalRotation = rightStickInput.y * lookSensetivey;
         verticalRotStore += verticalRotation;
         verticalRotStore = Mathf.Clamp(verticalRotStore, -50f, 60f);
-        playerHead.transform.localRotation = Quaternion.Euler(-verticalRotStore, 0f, 0f);
-
-       // playerHead.transform.Rotate(Vector3.right,  stickInput.y * lookSensetivey);
-        
+        playerHead.transform.localRotation = Quaternion.Euler(verticalRotStore, 0f, 0f);
     }
     void MoveControll()
     {
+        yStore = movementDirection.y;
+        float horizontalInput = Input.GetAxisRaw(leftStickHorizontal);
+        float verticalInput = Input.GetAxisRaw(leftStickVertical);
 
+        Vector3 forwardDirection = playerHead.forward;
+        forwardDirection.y = 0f;
+        movementDirection = (horizontalInput * playerHead.right + verticalInput * forwardDirection).normalized;
+
+        movementDirection.y = yStore;
+        charCon.Move(movementDirection * moveSpeed * Time.deltaTime);
     }
-
+    void Jump()
+    {
+        if(charCon.isGrounded)
+        {
+            if(Input.GetButtonDown(jump))
+            {
+                movementDirection.y = jumpForce;
+            }
+        }
+    }
 }
