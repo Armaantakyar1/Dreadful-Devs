@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class PlayerMovementController : MonoBehaviour
 {
-    [SerializeField] Transform playerHead;
+    [SerializeField] Transform playerUpperbody;
+    [SerializeField] Transform camViewPoint;
     [SerializeField] Animator animator;
 
     [SerializeField] float moveSpeed;
@@ -65,7 +66,8 @@ public class PlayerMovementController : MonoBehaviour
         float verticalRotation = rightStickInput.y * lookSensetivey;
         verticalRotStore += verticalRotation;
         verticalRotStore = Mathf.Clamp(verticalRotStore, -50f, 60f);
-        playerHead.transform.localRotation = Quaternion.Euler(verticalRotStore, 0f, 0f);
+        playerUpperbody.transform.localRotation = Quaternion.Euler(verticalRotStore, 0f, 0f);
+        camViewPoint.transform.localRotation = Quaternion.Euler(verticalRotStore, 0f, 0f);
     }
     void MoveControll()
     {
@@ -73,9 +75,9 @@ public class PlayerMovementController : MonoBehaviour
         float horizontalInput = Input.GetAxisRaw(leftStickHorizontal);
         float verticalInput = Input.GetAxisRaw(leftStickVertical);
 
-        Vector3 forwardDirection = playerHead.forward;
+        Vector3 forwardDirection = playerUpperbody.forward;
         forwardDirection.y = 0f;
-        movementDirection = (horizontalInput * playerHead.right + verticalInput * forwardDirection).normalized;
+        movementDirection = (horizontalInput * playerUpperbody.right + verticalInput * forwardDirection).normalized;
 
         movementDirection.y = yStore;
         charCon.Move(movementDirection * moveSpeed * Time.deltaTime);
