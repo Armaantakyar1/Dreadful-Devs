@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class PressurePlate : MonoBehaviour
+public class EndPlayerPlate : MonoBehaviour
 {
-    public GameObject toManiplate;
+    private int playersOnPlate = 0;
     public Color pressedColor;
     private Color originalColor;
     private Renderer plateRenderer;
@@ -16,13 +17,16 @@ public class PressurePlate : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        playersOnPlate++;
         plateRenderer.material.color = pressedColor;
-        toManiplate.SetActive(true);
+        if (playersOnPlate == 2)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
     private void OnTriggerExit(Collider other)
     {
+        playersOnPlate--;
         plateRenderer.material.color = originalColor;
-        toManiplate.SetActive(false);
     }
-
 }
