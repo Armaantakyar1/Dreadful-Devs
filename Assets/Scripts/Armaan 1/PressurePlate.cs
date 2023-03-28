@@ -7,6 +7,7 @@ public class PressurePlate : MonoBehaviour
     public GameObject toManiplate;
     public Color pressedColor;
     private Color originalColor;
+    public AudioSource PlateSFX;
     private Renderer plateRenderer;
     private void Start()
     {
@@ -17,6 +18,7 @@ public class PressurePlate : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         plateRenderer.material.color = pressedColor;
+        PlateSFX.Play();
         toManiplate.SetActive(true);
     }
     private void OnTriggerExit(Collider other)

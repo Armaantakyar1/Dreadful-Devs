@@ -9,6 +9,7 @@ public class EndPlayerPlate : MonoBehaviour
     public Color pressedColor;
     private Color originalColor;
     private Renderer plateRenderer;
+    public AudioSource PlateSFX;
     private void Start()
     {
         plateRenderer = GetComponent<Renderer>();
@@ -19,9 +20,10 @@ public class EndPlayerPlate : MonoBehaviour
     {
         playersOnPlate++;
         plateRenderer.material.color = pressedColor;
+        PlateSFX.Play();
         if (playersOnPlate == 2)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene("Victory");
         }
     }
     private void OnTriggerExit(Collider other)
