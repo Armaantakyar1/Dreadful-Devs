@@ -50,8 +50,7 @@ public class PlayerMovementController : MonoBehaviour
         }
         else
         {
-            movementDirection.y = Physics.gravity.y * Time.fixedDeltaTime;
-            
+            movementDirection.y = Physics.gravity.y * Time.fixedDeltaTime;      
         }
     }
 
