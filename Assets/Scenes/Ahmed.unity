@@ -554,7 +554,7 @@ GameObject:
   - component: {fileID: 1695116251}
   - component: {fileID: 1695116255}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: Triggerpont
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -580,7 +580,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695116249}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -631,8 +631,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695116249}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3241096, y: 0.98, z: 3.65}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.3241096, y: -23.3, z: 3.65}
+  m_LocalScale: {x: 80, y: 3, z: 80}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -899,6 +899,22 @@ PrefabInstance:
     - target: {fileID: 5225364780265935256, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696632313818299902, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
+      propertyPath: leftStickVertical
+      value: Vertical
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696632313818299902, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
+      propertyPath: rightStickVertical
+      value: RightStickVertical
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696632313818299902, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
+      propertyPath: leftStickHorizontal
+      value: Horizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696632313818299902, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
+      propertyPath: rightStickHorizontal
+      value: RightStickHorizontal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
