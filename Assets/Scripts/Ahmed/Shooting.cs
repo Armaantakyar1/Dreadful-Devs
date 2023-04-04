@@ -27,7 +27,7 @@ public class Shooting : MonoBehaviour
         Ray ray = cam1.ViewportPointToRay(new Vector3(.5f, .5f, 0f));
         ray.origin = cam1.transform.position;
         Vector3 maxSize = new Vector3(3f, 3f, 3f);
-        if (Physics.Raycast(ray, out RaycastHit hit) && hit.transform.localScale != maxSize)
+        if (Physics.Raycast(ray, out RaycastHit hit) && hit.transform.localScale != maxSize && hit.collider.gameObject.CompareTag("Player"))
         {
             hit.transform.localScale += new Vector3(.5f,.5f,.5f); 
         }
@@ -37,12 +37,12 @@ public class Shooting : MonoBehaviour
         Ray ray = cam1.ViewportPointToRay(new Vector3(.5f, .5f, 0f));
         ray.origin = cam1.transform.position;
         Vector3 minSize = new Vector3(.5f, .5f, .5f);
-        if (Physics.Raycast(ray, out RaycastHit hit) && hit.transform.localScale != minSize)
+        if (Physics.Raycast(ray, out RaycastHit hit) && hit.transform.localScale != minSize && hit.collider.gameObject.CompareTag("Player"))
         {
             hit.transform.localScale -= new Vector3(.5f, .5f, .5f);
         }
     }
-    IEnumerator GrowGradually(RaycastHit hit)
+    /*IEnumerator GrowGradually(RaycastHit hit)
     {
         Vector3 maxSize = new Vector3(.5f, .5f, .5f);
         Vector3 scaleIncrement = new Vector3(0.01f, 0.01f, 0.01f);
@@ -52,5 +52,5 @@ public class Shooting : MonoBehaviour
             hit.transform.localScale += scaleIncrement;
             yield return new WaitForSeconds(0.01f);
         }
-    }
+    }*/
 }
