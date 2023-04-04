@@ -29,17 +29,17 @@ public class Shooting : MonoBehaviour
         Vector3 maxSize = new Vector3(3f, 3f, 3f);
         if (Physics.Raycast(ray, out RaycastHit hit) && hit.transform.localScale != maxSize && hit.collider.gameObject.CompareTag("Player"))
         {
-            hit.transform.localScale += new Vector3(.5f,.5f,.5f); 
+            hit.transform.localScale += new Vector3(.25f,.25f,.25f); 
         }
     }
     void ScaleDownShoot()
     {
         Ray ray = cam1.ViewportPointToRay(new Vector3(.5f, .5f, 0f));
         ray.origin = cam1.transform.position;
-        Vector3 minSize = new Vector3(.5f, .5f, .5f);
+        Vector3 minSize = new Vector3(.25f, .25f, .25f);
         if (Physics.Raycast(ray, out RaycastHit hit) && hit.transform.localScale != minSize && hit.collider.gameObject.CompareTag("Player"))
         {
-            hit.transform.localScale -= new Vector3(.5f, .5f, .5f);
+            hit.transform.localScale -= new Vector3(.25f, .25f, .25f);
         }
     }
     /*IEnumerator GrowGradually(RaycastHit hit)
