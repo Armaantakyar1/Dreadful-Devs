@@ -23,7 +23,7 @@ public class EndPlayerPlate : MonoBehaviour
         PlateSFX.Play();
         if (playersOnPlate == 2)
         {
-            SceneManager.LoadScene("Victory");
+            SceneManager.LoadScene("Level 2");
         }
     }
     private void OnTriggerExit(Collider other)
