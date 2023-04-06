@@ -23,10 +23,12 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] string jump;
 
     CharacterController charCon;
+    public Vector3 direction = Vector2.zero;
 
     Vector2 rightStickInput;
     Vector3 movementDirection;
 
+    public Transform platform;
     float verticalRotStore;
 
     private void Awake()
@@ -79,7 +81,7 @@ public class PlayerMovementController : MonoBehaviour
         movementDirection = (horizontalInput * playerUpperbody.right + verticalInput * forwardDirection).normalized;
 
         movementDirection.y = yStore;
-        charCon.Move(movementDirection * moveSpeed * Time.deltaTime);
+        charCon.Move((movementDirection * moveSpeed +direction)*Time.deltaTime);
     }
     void Jump()
     {
@@ -109,4 +111,5 @@ public class PlayerMovementController : MonoBehaviour
             animator.SetBool("isMovingForward", false);
         }
     }
+
 }
