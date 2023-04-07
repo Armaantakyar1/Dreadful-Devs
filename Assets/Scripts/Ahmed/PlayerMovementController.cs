@@ -90,6 +90,7 @@ public class PlayerMovementController : MonoBehaviour
             if(Input.GetKeyDown(jump))
             {
                 movementDirection.y = jumpForce;
+                Debug.Log("jump");
             }
         }
     }
