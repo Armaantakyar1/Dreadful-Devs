@@ -6,11 +6,12 @@ public class ObjectPicker : MonoBehaviour
 {
 
     private GameObject pickedUpObject;
+    [SerializeField] KeyCode pickup;
 
     void Update()
     {
         
-        if (Input.GetButtonDown("PickUp"))
+        if (Input.GetKeyDown(pickup))
         {
 
             Collider[] hitColliders = Physics.OverlapSphere(transform.position, 1f);
@@ -29,7 +30,7 @@ public class ObjectPicker : MonoBehaviour
         }
 
      
-        if (Input.GetButtonDown("PutDown"))
+        if (Input.GetKeyDown(pickup))
         {
           
             if (pickedUpObject != null)

@@ -1169,7 +1169,7 @@ Transform:
   m_GameObject: {fileID: 4886380554010151714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.073, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2442597811523998697}
@@ -1234,11 +1234,13 @@ MonoBehaviour:
   moveSpeed: 4
   jumpForce: 2
   lookSensetivey: 1
-  rightStickHorizontal: RightStickHorizontal2
-  rightStickVertical: RightStickVertical2
-  leftStickHorizontal: Horizontal2
-  leftStickVertical: Vertical2
-  jump: Jump2
+  rightStickHorizontal: RightStickHorizontal
+  rightStickVertical: RightStickVertical
+  leftStickHorizontal: Horizontal
+  leftStickVertical: Vertical
+  jump: 350
+  direction: {x: 0, y: 0, z: 0}
+  platform: {fileID: 0}
 --- !u!114 &208940746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1252,8 +1254,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam1: {fileID: 5696632313012863588}
-  fireBig: FireBig 1
-  fireSmall: FireSmall 1
+  fireBig: 355
+  fireSmall: 354
 --- !u!136 &501129616
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1429,7 +1431,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5696632313012863594}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!1 &5696632313376365887
 GameObject:
   m_ObjectHideFlags: 0
