@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2285,10 +2285,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 208940746, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
-      propertyPath: fireBig
-      value: FireBig 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4886380554010151714, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
       propertyPath: m_Name
       value: Ch46_nonPBR P1
@@ -2296,18 +2292,6 @@ PrefabInstance:
     - target: {fileID: 5225364780265935256, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5225364780265935256, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5225364780265935256, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5225364780265935256, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5225364780265935256, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2348,26 +2332,6 @@ PrefabInstance:
     - target: {fileID: 5225364780265935256, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696632313818299902, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
-      propertyPath: jump
-      value: Jump
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696632313818299902, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
-      propertyPath: leftStickVertical
-      value: Vertical
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696632313818299902, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
-      propertyPath: rightStickVertical
-      value: RightStickVertical
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696632313818299902, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
-      propertyPath: leftStickHorizontal
-      value: Horizontal
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696632313818299902, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
-      propertyPath: rightStickHorizontal
-      value: RightStickHorizontal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}

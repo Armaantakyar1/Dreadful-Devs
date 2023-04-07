@@ -8,16 +8,17 @@ public class Shooting : MonoBehaviour
     [SerializeField] Camera cam1;
 
     [Header("JoyStick Mapping")]
-    [SerializeField] string fireBig;
-    [SerializeField] string fireSmall;
+    [SerializeField] KeyCode fireBig;
+    [SerializeField] KeyCode fireSmall;
 
     private void Update()
     {
-        if(Input.GetButtonDown(fireBig)) // rb on xbox game controller
+        if(Input.GetKeyDown(fireBig)) // rb on xbox game controller
         {
             ScaleUpShoot();
+            Debug.Log("fireBig");
         }
-        if(Input.GetButtonDown(fireSmall)) // lb on xbox game controller
+        if(Input.GetKeyDown(fireSmall)) // lb on xbox game controller
         {
             ScaleDownShoot();
         }

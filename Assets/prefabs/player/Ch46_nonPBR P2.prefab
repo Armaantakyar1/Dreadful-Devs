@@ -1181,7 +1181,9 @@ MonoBehaviour:
   rightStickVertical: RightStickVertical2
   leftStickHorizontal: Horizontal2
   leftStickVertical: Vertical2
-  jump: Jump2
+  jump: 370
+  direction: {x: 0, y: 0, z: 0}
+  platform: {fileID: 0}
 --- !u!114 &7881914498542655716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1195,8 +1197,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam1: {fileID: 2480550536356705354}
-  fireBig: FireBig 2
-  fireSmall: FireSmall 2
+  fireBig: 375
+  fireSmall: 374
 --- !u!136 &7881914498784188350
 CapsuleCollider:
   m_ObjectHideFlags: 0

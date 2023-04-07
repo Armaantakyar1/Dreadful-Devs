@@ -20,7 +20,7 @@ public class PlayerMovementController : MonoBehaviour
 
     [SerializeField] string leftStickHorizontal;
     [SerializeField] string leftStickVertical;
-    [SerializeField] string jump;
+    [SerializeField] KeyCode jump;
 
     CharacterController charCon;
     public Vector3 direction = Vector2.zero;
@@ -87,7 +87,7 @@ public class PlayerMovementController : MonoBehaviour
     {
         if(charCon.isGrounded)
         {
-            if(Input.GetButtonDown(jump))
+            if(Input.GetKeyDown(jump))
             {
                 movementDirection.y = jumpForce;
             }
