@@ -15,6 +15,7 @@ public class PlayerMovementController : MonoBehaviour
     float yStore;
 
     [Header("Joystick Mapping")]
+
     [SerializeField] string rightStickHorizontal;
     [SerializeField] string rightStickVertical;
 
