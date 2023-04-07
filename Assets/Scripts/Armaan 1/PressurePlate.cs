@@ -18,8 +18,9 @@ public class PressurePlate : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         plateRenderer.material.color = pressedColor;
-        PlateSFX.Play();
         toManiplate.SetActive(true);
+        PlateSFX.Play();
+
     }
     private void OnTriggerExit(Collider other)
     {
