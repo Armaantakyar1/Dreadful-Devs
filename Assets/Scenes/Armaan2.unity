@@ -6125,7 +6125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2480550535014403024, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
       propertyPath: leftStickVertical
-      value: Vertical2
+      value: Player2LeftStickvertical
       objectReference: {fileID: 0}
     - target: {fileID: 2480550535014403024, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
       propertyPath: rightStickVertical
@@ -6133,7 +6133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2480550535014403024, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
       propertyPath: leftStickHorizontal
-      value: Horizontal2
+      value: Player1LeftStickHorizontal
       objectReference: {fileID: 0}
     - target: {fileID: 2480550535014403024, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
       propertyPath: rightStickHorizontal
