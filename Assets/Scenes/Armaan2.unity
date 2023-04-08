@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.31312752, g: 0.29379508, b: 0.51412296, a: 1}
+  m_IndirectSpecularColor: {r: 0.31300095, g: 0.29367912, b: 0.51405555, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6112,6 +6112,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2480550535014403024, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
+      propertyPath: jump
+      value: 370
+      objectReference: {fileID: 0}
+    - target: {fileID: 2480550535014403024, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
+      propertyPath: camViewPoint
+      value: 
+      objectReference: {fileID: 7881914497670968081}
+    - target: {fileID: 2480550535014403024, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
       propertyPath: lookSensetivey
       value: 1.5
       objectReference: {fileID: 0}
@@ -6181,3 +6189,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
+--- !u!4 &7881914497670968081 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2480550535453322000, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
+  m_PrefabInstance: {fileID: 7881914497670968080}
+  m_PrefabAsset: {fileID: 0}
