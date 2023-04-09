@@ -2,27 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PressurePlate : MonoBehaviour
+public class PP2 : MonoBehaviour
 {
     public GameObject toManiplate;
     public AudioSource PlateSFX;
-    private Renderer plateRenderer;
     public Animator plateanim;
 
 
     private void OnTriggerEnter(Collider other)
     {
-        toManiplate.SetActive(true);
+        toManiplate.SetActive(false);
         plateanim.SetBool("Press", true);
         PlateSFX.Play();
-      
+
 
     }
     private void OnTriggerExit(Collider other)
     {
-        toManiplate.SetActive(false);
+        toManiplate.SetActive(true);
         plateanim.SetBool("Release", true);
         plateanim.SetBool("Press", false);
     }
-
 }
