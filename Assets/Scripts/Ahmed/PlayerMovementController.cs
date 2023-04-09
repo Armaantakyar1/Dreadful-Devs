@@ -24,7 +24,7 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] KeyCode jump;
 
     CharacterController charCon;
-    public Vector3 direction = Vector2.zero;
+    public Vector3 direction = Vector3.zero;
 
     Vector2 rightStickInput;
     Vector3 movementDirection;
@@ -70,6 +70,10 @@ public class PlayerMovementController : MonoBehaviour
         verticalRotStore = Mathf.Clamp(verticalRotStore, -50f, 60f);
         playerUpperbody.transform.localRotation = Quaternion.Euler(verticalRotStore, 0f, 0f);
         camViewPoint.transform.localRotation = Quaternion.Euler(verticalRotStore, 0f, 0f);
+    }
+    public void ZeroDirection()
+    {
+        direction = Vector3.zero;
     }
     void MoveControll()
     {
