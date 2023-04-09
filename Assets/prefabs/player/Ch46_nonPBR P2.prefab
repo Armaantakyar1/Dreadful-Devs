@@ -1177,10 +1177,10 @@ MonoBehaviour:
   moveSpeed: 4
   jumpForce: 2
   lookSensetivey: 1
-  rightStickHorizontal: RightStickHorizontal2
-  rightStickVertical: RightStickVertical2
-  leftStickHorizontal: Horizontal2
-  leftStickVertical: Vertical2
+  rightStickHorizontal: RightStickHorizontal1
+  rightStickVertical: RightStickVertical1
+  leftStickHorizontal: Horizontal1
+  leftStickVertical: Vertical1
   jump: 370
   direction: {x: 0, y: 0, z: 0}
   platform: {fileID: 0}
