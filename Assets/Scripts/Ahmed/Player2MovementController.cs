@@ -62,6 +62,10 @@ public class Player2MovementController : MonoBehaviour
         playerUpperbody.transform.localRotation = Quaternion.Euler(verticalRotStore, 0f, 0f);
         camViewPoint.transform.localRotation = Quaternion.Euler(verticalRotStore, 0f, 0f);
     }
+    public void ZeroDirection()
+    {
+        direction = Vector3.zero;
+    }
     void MoveControll()
     {
         yStore = movementDirection.y;

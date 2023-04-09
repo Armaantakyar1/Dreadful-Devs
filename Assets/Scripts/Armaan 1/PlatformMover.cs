@@ -12,7 +12,8 @@ public class PlatformMover : MonoBehaviour
     private Vector3 direction;
     private bool movingToEnd = true;
     [SerializeField] PlayerMovementController attachedPlayer;
-    
+    [SerializeField] Player2MovementController attachedPlayer2;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -54,6 +55,11 @@ public class PlatformMover : MonoBehaviour
             attachedPlayer = other.gameObject.GetComponent<PlayerMovementController>();
    
         }
+        if (other.transform.CompareTag("Player2"))
+        {
+            attachedPlayer2 = other.gameObject.GetComponent<Player2MovementController>();
+
+        }
     }
 
 
@@ -64,6 +70,12 @@ public class PlatformMover : MonoBehaviour
             attachedPlayer.ZeroDirection();
             attachedPlayer = null;
          
+        }
+        if (other.transform.CompareTag("Player2"))
+        {
+            attachedPlayer2.ZeroDirection();
+            attachedPlayer2 = null;
+
         }
     }
 }
