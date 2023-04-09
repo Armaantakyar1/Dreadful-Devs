@@ -4,18 +4,41 @@ using UnityEngine;
 
 public class PlatformMover : MonoBehaviour
 {
-    [SerializeField] float duration;
-    [SerializeField] float speed;
+    public Transform startPoint;
+    public Transform endPoint;
+    public float speed;
+
+    private Rigidbody rb;
+    private Vector3 direction;
+    private bool movingToEnd = true;
     [SerializeField] PlayerMovementController attachedPlayer;
-    Rigidbody rb;
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        direction = (endPoint.position - startPoint.position).normalized;
     }
 
     private void Update()
     {
-        rb.velocity = Vector3.forward * speed;
+        if (movingToEnd)
+        {
+            if (Vector3.Distance(transform.position, endPoint.position) < 0.1f)
+            {
+                direction = (startPoint.position - endPoint.position).normalized;
+                movingToEnd = false;
+            }
+        }
+        else
+        {
+            if (Vector3.Distance(transform.position, startPoint.position) < 0.1f)
+            {
+                direction = (endPoint.position - startPoint.position).normalized;
+                movingToEnd = true;
+            }
+        }
+
+        rb.MovePosition(transform.position + direction * speed * Time.fixedDeltaTime);
         if (attachedPlayer)
         {
             attachedPlayer.direction = rb.velocity;
@@ -34,11 +57,11 @@ public class PlatformMover : MonoBehaviour
     {
         if (other.transform.CompareTag("StartPoint"))
         {
-            speed = 1;
+          
         }
         if (other.transform.CompareTag("EndPoint"))
         {
-            speed = -1;
+            
         }
         if (other.transform.CompareTag("Player"))
         {
@@ -53,6 +76,7 @@ public class PlatformMover : MonoBehaviour
         if (collision.transform.CompareTag("Player"))
         {
             attachedPlayer = null;
+
            
         }
     }
