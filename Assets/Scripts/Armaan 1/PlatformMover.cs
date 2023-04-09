@@ -45,24 +45,10 @@ public class PlatformMover : MonoBehaviour
         }
 
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.transform.CompareTag("Player"))
-        {
-            attachedPlayer = collision.gameObject.GetComponent<PlayerMovementController>();
-
-        }
-    }
+    
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.CompareTag("StartPoint"))
-        {
-          
-        }
-        if (other.transform.CompareTag("EndPoint"))
-        {
-            
-        }
+
         if (other.transform.CompareTag("Player"))
         {
             attachedPlayer = other.gameObject.GetComponent<PlayerMovementController>();
@@ -70,14 +56,13 @@ public class PlatformMover : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider other)
     {
-
-        if (collision.transform.CompareTag("Player"))
+        if (other.transform.CompareTag("Player"))
         {
             attachedPlayer = null;
 
-           
+
         }
     }
 }
