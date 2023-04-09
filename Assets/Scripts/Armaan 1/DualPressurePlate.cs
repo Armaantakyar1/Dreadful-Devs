@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DualPressurePlate : MonoBehaviour
 {
-   
 
     private bool player1Entered = false;
     private bool player2Entered = false;
