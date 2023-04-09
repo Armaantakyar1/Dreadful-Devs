@@ -38,7 +38,7 @@ public class PlatformMover : MonoBehaviour
             }
         }
 
-        rb.MovePosition(transform.position + direction * speed * Time.fixedDeltaTime);
+        rb.velocity = direction * speed;
         if (attachedPlayer)
         {
             attachedPlayer.direction = rb.velocity;
