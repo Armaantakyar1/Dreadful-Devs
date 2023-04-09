@@ -4,41 +4,37 @@ using UnityEngine;
 
 public class ObjectPicker : MonoBehaviour
 {
-    [SerializeField] Camera cam1;
-    private GameObject pickedUpObject;
+    [SerializeField] private float maxDistance = 2f;
+    [SerializeField] private LayerMask layerMask;
     [SerializeField] KeyCode pickup;
-    [SerializeField] KeyCode drop;
+
+    [SerializeField] Transform objectToPickup;
 
     void Update()
     {
-        if (Input.GetKeyDown(pickup))
+
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistance, layerMask))
+        {
+            if (hit.collider.CompareTag("Pickup"))
+            {
+                objectToPickup = hit.transform;
+            }
+        }
+        else
+        {
+            objectToPickup = null;
+        }
+        if (Input.GetKeyDown(pickup) && objectToPickup != null)
         {
 
-            Collider[] hitColliders = Physics.OverlapSphere(transform.position, 1f);
-            foreach (Collider hitCollider in hitColliders)
-            {
-                if (hitCollider.CompareTag("Pickup"))
-                {
-               
-                    pickedUpObject = hitCollider.gameObject;
-                    pickedUpObject.transform.SetParent(transform);
-                    
-                    pickedUpObject.GetComponent<Rigidbody>().isKinematic = true;
-                    
-                }
-            }
-        }
-        if (Input.GetKeyDown(drop))
-        {
-            if (pickedUpObject != null)
-            {
-          
-                pickedUpObject.transform.SetParent(null);
-                pickedUpObject.GetComponent<Rigidbody>().isKinematic = false;
-                pickedUpObject = null;
-            }
+            objectToPickup.SetParent(transform);
+            objectToPickup.localPosition = Vector3.zero;
+            objectToPickup.GetComponent<Rigidbody>().isKinematic = true;
+            objectToPickup = null;
         }
     }
+
 }
 
 
