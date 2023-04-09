@@ -9,6 +9,7 @@ TagManager:
   - Pickup
   - StartPoint
   - EndPoint
+  - Player2
   layers:
   - Default
   - TransparentFX
