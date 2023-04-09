@@ -60,9 +60,9 @@ public class PlatformMover : MonoBehaviour
     {
         if (other.transform.CompareTag("Player"))
         {
+            attachedPlayer.ZeroDirection();
             attachedPlayer = null;
-
-
+         
         }
     }
 }
