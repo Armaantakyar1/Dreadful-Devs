@@ -7,6 +7,7 @@ public class ObjectPicker : MonoBehaviour
     [SerializeField] private float maxDistance = 2f;
     [SerializeField] private LayerMask layerMask;
     [SerializeField] KeyCode pickup;
+    [SerializeField] KeyCode drop;
 
     [SerializeField] Transform objectToPickup;
 
@@ -33,8 +34,19 @@ public class ObjectPicker : MonoBehaviour
             objectToPickup.GetComponent<Rigidbody>().isKinematic = true;
             objectToPickup = null;
         }
-    }
+        else if (Input.GetKeyDown(drop))
+        {
+            
+            Transform carriedObject = transform.GetChild(3);
+            if (carriedObject != null)
+            {
+                
+                carriedObject.SetParent(null);
+                carriedObject.GetComponent<Rigidbody>().isKinematic = false;
+            }
+        }
 
+    }
 }
 
 

@@ -1153,6 +1153,7 @@ GameObject:
   - component: {fileID: 208940746}
   - component: {fileID: 501129616}
   - component: {fileID: 493011255}
+  - component: {fileID: 441408023}
   m_Layer: 0
   m_Name: Ch46_nonPBR
   m_TagString: Player
@@ -1284,6 +1285,25 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &441408023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4886380554010151714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b69e95fef1da87840850c2cfbeec0a8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 2147483647
+  pickup: 331
+  drop: 332
+  objectToPickup: {fileID: 0}
 --- !u!1 &5382291162702831187
 GameObject:
   m_ObjectHideFlags: 0

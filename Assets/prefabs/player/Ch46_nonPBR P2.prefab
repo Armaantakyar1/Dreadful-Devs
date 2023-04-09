@@ -1096,6 +1096,7 @@ GameObject:
   - component: {fileID: 7881914498784188350}
   - component: {fileID: 7881914498795452185}
   - component: {fileID: 703892582}
+  - component: {fileID: 703892588}
   m_Layer: 0
   m_Name: Ch46_nonPBR P2
   m_TagString: Player
@@ -1222,6 +1223,25 @@ MonoBehaviour:
   lookSensetivey: 1
   jump: 370
   direction: {x: 0, y: 0, z: 0}
+--- !u!114 &703892588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3363562476522192140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b69e95fef1da87840850c2cfbeec0a8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 2
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 32
+  pickup: 371
+  drop: 372
+  objectToPickup: {fileID: 0}
 --- !u!1 &3529096795752658864
 GameObject:
   m_ObjectHideFlags: 0
