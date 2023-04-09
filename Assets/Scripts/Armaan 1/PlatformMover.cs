@@ -4,44 +4,56 @@ using UnityEngine;
 
 public class PlatformMover : MonoBehaviour
 {
-    public Transform startPoint;
-    public Transform endPoint;
-    public float duration;
-    public PlayerMovementController attachedPlayer;
+    [SerializeField] float duration;
+    [SerializeField] float speed;
+    [SerializeField] PlayerMovementController attachedPlayer;
+    Rigidbody rb;
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
     private void Update()
     {
-        GetComponent<Rigidbody>().velocity = Vector3.forward;
+        rb.velocity = Vector3.forward * speed;
         if (attachedPlayer)
         {
-            attachedPlayer.direction = GetComponent<Rigidbody>().velocity;
+            attachedPlayer.direction = rb.velocity;
         }
-        //float t = Mathf.PingPong(Time.time / duration, 1f);
-        //transform.position = Vector3.Lerp(startPoint.position, endPoint.position, t);
+
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.CompareTag("Player1"))
+        if (collision.transform.CompareTag("Player"))
         {
             attachedPlayer = collision.gameObject.GetComponent<PlayerMovementController>();
-            //collision.gameObject.transform.SetParent(transfo
+
         }
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.CompareTag("Player1"))
+        if (other.transform.CompareTag("StartPoint"))
+        {
+            speed = 1;
+        }
+        if (other.transform.CompareTag("EndPoint"))
+        {
+            speed = -1;
+        }
+        if (other.transform.CompareTag("Player"))
         {
             attachedPlayer = other.gameObject.GetComponent<PlayerMovementController>();
-            //collision.gameObject.transform.SetParent(transform);
+   
         }
     }
 
     private void OnCollisionExit(Collision collision)
     {
 
-        if (collision.transform.CompareTag("Player1"))
+        if (collision.transform.CompareTag("Player"))
         {
             attachedPlayer = null;
-            //collision.gameObject.transform.SetParent(null);
+           
         }
     }
 }

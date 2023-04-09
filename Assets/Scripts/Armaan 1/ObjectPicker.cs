@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class ObjectPicker : MonoBehaviour
 {
-
+    [SerializeField] Camera cam1;
     private GameObject pickedUpObject;
     [SerializeField] KeyCode pickup;
+    [SerializeField] KeyCode drop;
 
     void Update()
     {
-        
         if (Input.GetKeyDown(pickup))
         {
 
@@ -22,17 +22,14 @@ public class ObjectPicker : MonoBehaviour
                
                     pickedUpObject = hitCollider.gameObject;
                     pickedUpObject.transform.SetParent(transform);
-                    pickedUpObject.transform.localPosition = new Vector3(0f, 0.5f, 0f);
+                    
                     pickedUpObject.GetComponent<Rigidbody>().isKinematic = true;
                     
                 }
             }
         }
-
-     
-        if (Input.GetKeyDown(pickup))
+        if (Input.GetKeyDown(drop))
         {
-          
             if (pickedUpObject != null)
             {
           
