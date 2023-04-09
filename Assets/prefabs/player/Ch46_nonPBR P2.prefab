@@ -1092,10 +1092,10 @@ GameObject:
   - component: {fileID: 2730895431113402294}
   - component: {fileID: 8288376178549308876}
   - component: {fileID: 2480550535014403031}
-  - component: {fileID: 2480550535014403024}
   - component: {fileID: 7881914498542655716}
   - component: {fileID: 7881914498784188350}
   - component: {fileID: 7881914498795452185}
+  - component: {fileID: 703892582}
   m_Layer: 0
   m_Name: Ch46_nonPBR P2
   m_TagString: Player
@@ -1159,31 +1159,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.8, z: 0}
---- !u!114 &2480550535014403024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3363562476522192140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ea197086755e6340a7229940cf382fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUpperbody: {fileID: 3657768992738238553}
-  camViewPoint: {fileID: 2480550535453322000}
-  animator: {fileID: 8288376178549308876}
-  moveSpeed: 4
-  jumpForce: 2
-  lookSensetivey: 1
-  rightStickHorizontal: RightStickHorizontal1
-  rightStickVertical: RightStickVertical1
-  leftStickHorizontal: Horizontal1
-  leftStickVertical: Vertical1
-  jump: 370
-  direction: {x: 0, y: 0, z: 0}
-  platform: {fileID: 0}
 --- !u!114 &7881914498542655716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1227,6 +1202,26 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &703892582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3363562476522192140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b121aacd0c411e4ab1eeddd07331978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUpperbody: {fileID: 3657768992738238553}
+  camViewPoint: {fileID: 2480550535453322000}
+  animator: {fileID: 8288376178549308876}
+  moveSpeed: 4
+  jumpForce: 2
+  lookSensetivey: 1
+  jump: 370
+  direction: {x: 0, y: 0, z: 0}
 --- !u!1 &3529096795752658864
 GameObject:
   m_ObjectHideFlags: 0

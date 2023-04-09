@@ -2008,49 +2008,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch46_nonPBR P2
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2480550535014403024, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
---- !u!1 &703892578 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3363562476522192140, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
-  m_PrefabInstance: {fileID: 703892577}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &703892579 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2480550535453322000, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
-  m_PrefabInstance: {fileID: 703892577}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &703892580 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3657768992738238553, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
-  m_PrefabInstance: {fileID: 703892577}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &703892581 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 8288376178549308876, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
-  m_PrefabInstance: {fileID: 703892577}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &703892582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703892578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b121aacd0c411e4ab1eeddd07331978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUpperbody: {fileID: 703892580}
-  camViewPoint: {fileID: 703892579}
-  animator: {fileID: 703892581}
-  moveSpeed: 4
-  jumpForce: 2
-  lookSensetivey: 1
-  jump: 370
-  direction: {x: 0, y: 0, z: 0}
 --- !u!1001 &706995771
 PrefabInstance:
   m_ObjectHideFlags: 0
