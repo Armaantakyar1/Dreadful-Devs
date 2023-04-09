@@ -17,6 +17,13 @@ public class PP2 : MonoBehaviour
 
 
     }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Pickup"))
+        {
+            toManiplate.SetActive(false);
+        }
+    }
     private void OnTriggerExit(Collider other)
     {
         toManiplate.SetActive(true);

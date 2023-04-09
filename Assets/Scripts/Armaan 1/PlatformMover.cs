@@ -56,6 +56,7 @@ public class PlatformMover : MonoBehaviour
         }
     }
 
+
     private void OnTriggerExit(Collider other)
     {
         if (other.transform.CompareTag("Player"))
