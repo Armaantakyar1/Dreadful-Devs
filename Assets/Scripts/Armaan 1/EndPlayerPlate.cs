@@ -6,29 +6,24 @@ using UnityEngine.SceneManagement;
 public class EndPlayerPlate : MonoBehaviour
 {
     private int playersOnPlate = 0;
-    public Color pressedColor;
-    private Color originalColor;
-    private Renderer plateRenderer;
     public AudioSource PlateSFX;
-    private void Start()
-    {
-        plateRenderer = GetComponent<Renderer>();
-        originalColor = plateRenderer.material.color;
-    }
+    public Animator endplateanim;
+    public string nextscene;
 
     private void OnTriggerEnter(Collider other)
     {
         playersOnPlate++;
-        plateRenderer.material.color = pressedColor;
         PlateSFX.Play();
+        endplateanim.SetBool("Press",true);
         if (playersOnPlate == 2)
         {
-            SceneManager.LoadScene("Level 2");
+            SceneManager.LoadScene(nextscene);
         }
     }
     private void OnTriggerExit(Collider other)
     {
+        endplateanim.SetBool("Press", false);
+        endplateanim.SetBool("Release", true);
         playersOnPlate--;
-        plateRenderer.material.color = originalColor;
     }
 }
