@@ -37,7 +37,7 @@ public class ObjectPicker : MonoBehaviour
         else if (Input.GetKeyDown(drop))
         {
             
-            Transform carriedObject = transform.GetChild(3);
+            Transform carriedObject = transform.GetChild(4);
             if (carriedObject != null)
             {
                 

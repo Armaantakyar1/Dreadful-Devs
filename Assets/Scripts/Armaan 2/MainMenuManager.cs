@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
+    public string nextscene;
   
     public void Play()
     {
-        SceneManager.LoadScene("Armaan2");
+        SceneManager.LoadScene(nextscene);
     }
 
     public void Quit()

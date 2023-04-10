@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SubtractiveShadowColor: {r: 0.55137056, g: 0.63028127, b: 0.8301887, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 1cf6f4c6e6e0518419839d3f5448dd99, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.31312752, g: 0.29379508, b: 0.51412296, a: 1}
+  m_IndirectSpecularColor: {r: 0.31316918, g: 0.29387584, b: 0.5141697, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: f3fcab9fe7e638146b81c08b55ca6345, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -722,11 +722,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1122319448255147612, guid: ebdaa359b04927347b2195adeffeea9f, type: 3}
       propertyPath: m_Size.y
-      value: 0.54093987
+      value: 1.7912829
       objectReference: {fileID: 0}
     - target: {fileID: 1122319448255147612, guid: ebdaa359b04927347b2195adeffeea9f, type: 3}
       propertyPath: m_Center.y
-      value: 0.27046993
+      value: 0.89564145
       objectReference: {fileID: 0}
     - target: {fileID: 1122319448255147612, guid: ebdaa359b04927347b2195adeffeea9f, type: 3}
       propertyPath: m_IsTrigger
@@ -3125,6 +3125,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4886380554010151714, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5225364780265935256, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3576,11 +3580,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1122319448255147612, guid: ebdaa359b04927347b2195adeffeea9f, type: 3}
       propertyPath: m_Size.y
-      value: 0.54093987
+      value: 1.4436271
       objectReference: {fileID: 0}
     - target: {fileID: 1122319448255147612, guid: ebdaa359b04927347b2195adeffeea9f, type: 3}
       propertyPath: m_Center.y
-      value: 0.27046993
+      value: 0.72181356
       objectReference: {fileID: 0}
     - target: {fileID: 1122319448255147612, guid: ebdaa359b04927347b2195adeffeea9f, type: 3}
       propertyPath: m_IsTrigger
@@ -5582,11 +5586,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1122319448255147612, guid: ebdaa359b04927347b2195adeffeea9f, type: 3}
       propertyPath: m_Size.y
-      value: 0.54093987
+      value: 2.7448125
       objectReference: {fileID: 0}
     - target: {fileID: 1122319448255147612, guid: ebdaa359b04927347b2195adeffeea9f, type: 3}
       propertyPath: m_Center.y
-      value: 0.27046993
+      value: 1.3724062
       objectReference: {fileID: 0}
     - target: {fileID: 1122319448255147612, guid: ebdaa359b04927347b2195adeffeea9f, type: 3}
       propertyPath: m_IsTrigger
@@ -6442,11 +6446,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1122319448255147612, guid: ebdaa359b04927347b2195adeffeea9f, type: 3}
       propertyPath: m_Size.y
-      value: 0.54093987
+      value: 2.3821578
       objectReference: {fileID: 0}
     - target: {fileID: 1122319448255147612, guid: ebdaa359b04927347b2195adeffeea9f, type: 3}
       propertyPath: m_Center.y
-      value: 0.27046993
+      value: 1.1910789
       objectReference: {fileID: 0}
     - target: {fileID: 1122319448255147612, guid: ebdaa359b04927347b2195adeffeea9f, type: 3}
       propertyPath: m_IsTrigger
@@ -6798,6 +6802,10 @@ PrefabInstance:
     - target: {fileID: 3363562476522192140, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3363562476522192140, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
