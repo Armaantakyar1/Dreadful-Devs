@@ -3113,9 +3113,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1581557956, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4886380554010151714, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
       propertyPath: m_Name
       value: Ch46_nonPBR P1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886380554010151714, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5225364780265935256, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
       propertyPath: m_RootOrder
@@ -6707,6 +6715,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1537273637, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2480550535014403024, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
       propertyPath: jump
       value: 370

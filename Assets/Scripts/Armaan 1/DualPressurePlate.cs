@@ -7,9 +7,14 @@ public class DualPressurePlate : MonoBehaviour
 
     private bool player1Entered = false;
     private bool player2Entered = false;
+    public Animator DoorOpen;
+    public Animator plateanim;
+    public AudioSource PlateSFX;
 
     private void OnTriggerEnter(Collider other)
     {
+        PlateSFX.Play();
+        plateanim.SetBool("Press", true);
         if (other.gameObject.name == "Player1")
         {
             player1Entered = true;
@@ -27,6 +32,8 @@ public class DualPressurePlate : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        plateanim.SetBool("Release", true);
+        plateanim.SetBool("Press", false);
         if (other.gameObject.name == "Player1")
         {
             player1Entered = false;
@@ -39,6 +46,6 @@ public class DualPressurePlate : MonoBehaviour
     }
     void EndEvent()
     {
-
+        DoorOpen.SetBool("dooropen", true);
     }
 }
