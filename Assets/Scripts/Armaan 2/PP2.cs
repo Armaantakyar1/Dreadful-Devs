@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class PP2 : MonoBehaviour
 {
-    public GameObject toManiplate;
+    //public GameObject toManiplate;
     public AudioSource PlateSFX;
     public Animator plateanim;
+    public Animator ventdoor;
 
 
     private void OnTriggerEnter(Collider other)
     {
-        toManiplate.SetActive(false);
+        //toManiplate.SetActive(false);
         plateanim.SetBool("Press", true);
+        ventdoor.SetBool("Open", true);
         PlateSFX.Play();
 
 
@@ -21,13 +23,16 @@ public class PP2 : MonoBehaviour
     {
         if (other.CompareTag("Pickup"))
         {
-            toManiplate.SetActive(false);
+            //toManiplate.SetActive(false);
+            ventdoor.SetBool("Open", true);
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        toManiplate.SetActive(true);
+       // toManiplate.SetActive(true);
         plateanim.SetBool("Release", true);
         plateanim.SetBool("Press", false);
+        ventdoor.SetBool("Close", true);
+        ventdoor.SetBool("Open", false);
     }
 }
