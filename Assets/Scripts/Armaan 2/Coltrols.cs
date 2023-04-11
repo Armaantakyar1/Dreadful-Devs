@@ -6,6 +6,7 @@ public class Coltrols : MonoBehaviour
 {
     public GameObject controls;
     public GameObject pressescape;
+    public Animator pressescapeanim;
 
     void Update()
     {
@@ -13,8 +14,9 @@ public class Coltrols : MonoBehaviour
         {
             if (controls.gameObject.activeSelf)
             {
-                controls.gameObject.SetActive(false);
                 pressescape.gameObject.SetActive(true);
+                controls.gameObject.SetActive(false);
+             
             }
             else
             {
