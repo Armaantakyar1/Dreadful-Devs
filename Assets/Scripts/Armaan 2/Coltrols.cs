@@ -5,18 +5,26 @@ using UnityEngine;
 public class Coltrols : MonoBehaviour
 {
     public GameObject controls;
-    
+    public GameObject pressescape;
+
     void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (controls.gameObject.activeSelf)
             {
-                controls.SetActive(false);
+                controls.gameObject.SetActive(false);
+                pressescape.gameObject.SetActive(true);
             }
             else
             {
-                controls.SetActive(true);
+                controls.gameObject.SetActive(true);
+                pressescape.gameObject.SetActive(false);
             }
+        }
+
+
 
     }
-  }
+}
 
