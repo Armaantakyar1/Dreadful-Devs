@@ -34,7 +34,8 @@ public class ObjectPicker : MonoBehaviour
             objectToPickup.GetComponent<Rigidbody>().isKinematic = true;
             objectToPickup = null;
         }
-        else if (Input.GetKeyDown(drop))
+        
+        if (Input.GetKeyDown(drop))
         {
             
             Transform carriedObject = transform.GetChild(4);
