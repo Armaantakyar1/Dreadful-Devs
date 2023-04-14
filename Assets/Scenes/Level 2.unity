@@ -2208,7 +2208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlateSFX: {fileID: 468925855}
   endplateanim: {fileID: 468925852}
-  nextscene: Victory
+  nextscene: Level 3
 --- !u!82 &468925855
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4353,7 +4353,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7e9545788a2008041b811dd7ac00d381, type: 2}
+  - {fileID: 2100000, guid: acad2eb10e505514ab03a11d2978da82, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7678,7 +7678,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 37a2321913e5d1b4a8909ff136d4d0f2, type: 2}
+  - {fileID: 2100000, guid: acad2eb10e505514ab03a11d2978da82, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
