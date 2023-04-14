@@ -877,6 +877,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209355305}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &210735150 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2480550535139804851, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
+  m_PrefabInstance: {fileID: 703892577}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &226325247 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8985431681541207899, guid: ebdaa359b04927347b2195adeffeea9f, type: 3}
@@ -3256,12 +3261,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3363562476522192140, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
       propertyPath: m_Name
-      value: Ch46_nonPBR P2
+      value: Player 2
       objectReference: {fileID: 0}
-    - target: {fileID: 7881914498542655716, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 8358484686457347665, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
+      propertyPath: gunBody
+      value: 
+      objectReference: {fileID: 1971842496}
+    - target: {fileID: 8358484686457347665, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
+      propertyPath: gunCollider
+      value: 
+      objectReference: {fileID: 1971842495}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
 --- !u!114 &703892579 stripped
@@ -5538,11 +5547,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201933149}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1228003973 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4614923482554640505, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
-  m_PrefabInstance: {fileID: 1462071382}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1249754575 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3423879537542994086, guid: 5a01c2800c0c3d246b4d6de91b14feb0, type: 3}
@@ -5658,10 +5662,10 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1265680785}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1292254235 stripped
+--- !u!1 &1309427352 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 3272339075647004247, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
-  m_PrefabInstance: {fileID: 703892577}
+  m_CorrespondingSourceObject: {fileID: 5696632313962508445, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
+  m_PrefabInstance: {fileID: 1462071382}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1334223140
 GameObject:
@@ -6259,13 +6263,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 208940746, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4886380554010151714, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
       propertyPath: m_Name
-      value: Ch46_nonPBR P1
+      value: Player 1
       objectReference: {fileID: 0}
     - target: {fileID: 5225364780265935256, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
       propertyPath: m_RootOrder
@@ -7611,6 +7611,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebdaa359b04927347b2195adeffeea9f, type: 3}
+--- !u!65 &1971842495 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 3113629480430493989, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
+  m_PrefabInstance: {fileID: 703892577}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1971842496 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 1189065791722444621, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
+  m_PrefabInstance: {fileID: 703892577}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1999359386
 GameObject:
   m_ObjectHideFlags: 0
@@ -8154,8 +8164,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsToActivate:
   - {fileID: 2143629415}
-  - {fileID: 1228003973}
-  - {fileID: 1292254235}
+  - {fileID: 1309427352}
+  - {fileID: 210735150}
   - {fileID: 318186462}
   - {fileID: 719802526}
   - {fileID: 440940512}

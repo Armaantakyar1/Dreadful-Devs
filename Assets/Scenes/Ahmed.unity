@@ -900,21 +900,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5696632313818299902, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
-      propertyPath: leftStickVertical
-      value: Vertical
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696632313818299902, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
-      propertyPath: rightStickVertical
-      value: RightStickVertical
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696632313818299902, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
-      propertyPath: leftStickHorizontal
-      value: Horizontal
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696632313818299902, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
-      propertyPath: rightStickHorizontal
-      value: RightStickHorizontal
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
