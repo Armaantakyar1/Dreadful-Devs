@@ -23,18 +23,19 @@ public class GunDropAndPick : MonoBehaviour
     {
         DistanceFromGun();
 
-        if (!pickedUp && distanceBetweenGun < 4 && Input.GetKeyDown(KeyCode.JoystickButton3)) 
+        if (!pickedUp && distanceBetweenGun < 3 && Input.GetKeyDown(KeyCode.JoystickButton3)) 
         {
             gunBody.isKinematic = true;
             gunBody.useGravity = false;
             gunCollider.enabled = false;
-            gunHoldPoint.position = gun.position;
             gunHoldPoint.parent = gun;
+            gunHoldPoint.position = gun.position;
             pickedUp = true;
+
         }
         if(pickedUp && Input.GetKeyDown(KeyCode.JoystickButton3)) 
         { 
-            gunHoldPoint.parent = null;
+            gunHoldPoint.DetachChildren();
             gunBody.isKinematic = false;
             gunBody.useGravity = true;
             gunCollider.enabled = true;

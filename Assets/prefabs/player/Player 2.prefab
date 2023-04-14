@@ -1271,6 +1271,7 @@ MonoBehaviour:
   cam1: {fileID: 2480550536356705354}
   fireBig: 375
   fireSmall: 374
+  player: 
 --- !u!136 &7881914498784188350
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1357,8 +1358,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunHoldPoint: {fileID: 2480550535139804850}
   gun: {fileID: 2569061153114508391}
-  gunBody: {fileID: 0}
-  gunCollider: {fileID: 0}
+  gunBody: {fileID: 1189065791722444621}
+  gunCollider: {fileID: 3113629480430493989}
 --- !u!1 &3529096795752658864
 GameObject:
   m_ObjectHideFlags: 0

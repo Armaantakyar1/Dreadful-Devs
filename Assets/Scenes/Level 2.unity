@@ -3263,14 +3263,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 2
       objectReference: {fileID: 0}
-    - target: {fileID: 8358484686457347665, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
-      propertyPath: gunBody
-      value: 
-      objectReference: {fileID: 1971842496}
-    - target: {fileID: 8358484686457347665, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
-      propertyPath: gunCollider
-      value: 
-      objectReference: {fileID: 1971842495}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
 --- !u!114 &703892579 stripped
@@ -7611,16 +7603,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebdaa359b04927347b2195adeffeea9f, type: 3}
---- !u!65 &1971842495 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 3113629480430493989, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
-  m_PrefabInstance: {fileID: 703892577}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &1971842496 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 1189065791722444621, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
-  m_PrefabInstance: {fileID: 703892577}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1999359386
 GameObject:
   m_ObjectHideFlags: 0
