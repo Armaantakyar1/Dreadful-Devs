@@ -1274,7 +1274,7 @@ MonoBehaviour:
   cam1: {fileID: 2480550536356705354}
   fireBig: 375
   fireSmall: 374
-  playerAffected: 
+  playerAffected: Player1
   scaleUpSfx: {fileID: 564315264436742117}
   scaleDownSfx: {fileID: 4519228897959131511}
 --- !u!136 &7881914498784188350

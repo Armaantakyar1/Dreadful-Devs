@@ -26,6 +26,16 @@ public class PP2 : MonoBehaviour
             //toManiplate.SetActive(false);
             ventdoor.SetBool("Open", true);
         }
+        if (other.CompareTag("Player"))
+        {
+            //toManiplate.SetActive(false);
+            ventdoor.SetBool("Open", true);
+        }
+        if (other.CompareTag("Player1"))
+        {
+            //toManiplate.SetActive(false);
+            ventdoor.SetBool("Open", true);
+        }
     }
     private void OnTriggerExit(Collider other)
     {

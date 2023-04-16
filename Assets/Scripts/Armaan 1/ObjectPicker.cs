@@ -42,7 +42,7 @@ public class ObjectPicker : MonoBehaviour
             Transform carriedObject = transform.GetChild(childPosition);
             if (carriedObject != null)
             {
-                
+                objectToPickup = null;
                 carriedObject.SetParent(null);
                 carriedObject.GetComponent<Rigidbody>().isKinematic = false;
             }
