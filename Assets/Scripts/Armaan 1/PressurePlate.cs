@@ -18,7 +18,7 @@ public class PressurePlate : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Pickup"))
+        if (other.CompareTag("Object"))
         {
             toManiplate.SetActive(true);
         }
