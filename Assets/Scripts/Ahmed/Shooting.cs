@@ -11,16 +11,20 @@ public class Shooting : MonoBehaviour
     [SerializeField] KeyCode fireBig;
     [SerializeField] KeyCode fireSmall;
     [SerializeField] string player;
+    [SerializeField] AudioSource scaleUpSfx;
+    [SerializeField] AudioSource scaleDownSfx;
 
     private void Update()
     {
         if(Input.GetKeyDown(fireBig)) // rb on xbox game controller
         {
+            scaleUpSfx.Play();
             ScaleUpShoot();
             Debug.Log("fireBig");
         }
         if(Input.GetKeyDown(fireSmall)) // lb on xbox game controller
         {
+            scaleDownSfx.Play();
             ScaleDownShoot();
         }
     }
