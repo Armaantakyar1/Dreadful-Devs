@@ -13,7 +13,7 @@ public class BigActivator : MonoBehaviour
         {
             ActivateObjects();
         }
-        if (other.CompareTag("Player2"))
+        if (other.CompareTag("Player1"))
         {
             ActivateObjects();
         }

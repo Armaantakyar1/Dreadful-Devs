@@ -15,12 +15,18 @@ public class PressurePlate : MonoBehaviour
         toManiplate.SetActive(true);
         plateanim.SetBool("Press", true);
         PlateSFX.Play();
-      
-
     }
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Pickup"))
+        {
+            toManiplate.SetActive(true);
+        }
+        if (other.CompareTag("Player"))
+        {
+            toManiplate.SetActive(true);
+        }
+        if (other.CompareTag("Player1"))
         {
             toManiplate.SetActive(true);
         }

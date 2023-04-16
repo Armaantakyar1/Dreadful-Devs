@@ -8,16 +8,17 @@ public class ObjectPicker : MonoBehaviour
     [SerializeField] private LayerMask layerMask;
     [SerializeField] KeyCode pickup;
     [SerializeField] KeyCode drop;
-
+    [SerializeField] Transform point;
     [SerializeField] Transform objectToPickup;
-
+    [SerializeField] int childPosition;
+    
     void Update()
     {
 
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistance, layerMask))
         {
-            if (hit.collider.CompareTag("Pickup"))
+            if (hit.collider.CompareTag("Object"))
             {
                 objectToPickup = hit.transform;
             }
@@ -30,15 +31,15 @@ public class ObjectPicker : MonoBehaviour
         {
 
             objectToPickup.SetParent(transform);
-            objectToPickup.localPosition = Vector3.zero;
+            objectToPickup.transform.position = point.position;
             objectToPickup.GetComponent<Rigidbody>().isKinematic = true;
-            objectToPickup = null;
+            
         }
         
         if (Input.GetKeyDown(drop))
         {
             
-            Transform carriedObject = transform.GetChild(4);
+            Transform carriedObject = transform.GetChild(childPosition);
             if (carriedObject != null)
             {
                 

@@ -1356,7 +1356,7 @@ MonoBehaviour:
   cam1: {fileID: 5696632313012863588}
   fireBig: 355
   fireSmall: 354
-  player: Player
+  playerAffected: 
   scaleUpSfx: {fileID: -8477174196627318027}
   scaleDownSfx: {fileID: 4014735067059263542}
 --- !u!136 &501129616
@@ -1405,7 +1405,9 @@ MonoBehaviour:
     m_Bits: 2147483647
   pickup: 331
   drop: 332
+  point: {fileID: 0}
   objectToPickup: {fileID: 0}
+  childPosition: 5
 --- !u!114 &1750509590
 MonoBehaviour:
   m_ObjectHideFlags: 0

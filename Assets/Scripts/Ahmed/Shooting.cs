@@ -33,7 +33,7 @@ public class Shooting : MonoBehaviour
         Ray ray = cam1.ViewportPointToRay(new Vector3(.5f, .5f, 0f));
         ray.origin = cam1.transform.position;
         Vector3 maxSize = new Vector3(3f, 3f, 3f);
-        if (Physics.Raycast(ray, out RaycastHit hit) && hit.transform.localScale != maxSize && (hit.collider.gameObject.CompareTag(playerAffected) || hit.collider.gameObject.CompareTag("Pickup")))
+        if (Physics.Raycast(ray, out RaycastHit hit) && hit.transform.localScale != maxSize && (hit.collider.gameObject.CompareTag(playerAffected) || hit.collider.gameObject.CompareTag("Pickup") || hit.collider.gameObject.CompareTag("Object")))
         {
             hit.transform.localScale += new Vector3(.25f,.25f,.25f); 
         }
@@ -43,7 +43,7 @@ public class Shooting : MonoBehaviour
         Ray ray = cam1.ViewportPointToRay(new Vector3(.5f, .5f, 0f));
         ray.origin = cam1.transform.position;
         Vector3 minSize = new Vector3(.25f, .25f, .25f);
-        if (Physics.Raycast(ray, out RaycastHit hit) && hit.transform.localScale != minSize && (hit.collider.gameObject.CompareTag(playerAffected) || hit.collider.gameObject.CompareTag("Pickup")))
+        if (Physics.Raycast(ray, out RaycastHit hit) && hit.transform.localScale != minSize && (hit.collider.gameObject.CompareTag(playerAffected) || hit.collider.gameObject.CompareTag("Pickup") || hit.collider.gameObject.CompareTag("Object")))
         {
             hit.transform.localScale -= new Vector3(.25f, .25f, .25f);
         }

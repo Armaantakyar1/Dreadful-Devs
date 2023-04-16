@@ -244,6 +244,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3717915311091294311, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4886380554010151714, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
       propertyPath: m_Name
       value: Ch46_nonPBR
@@ -310,7 +314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5696632313818299902, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
       propertyPath: jump
-      value: Jump
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5696632313818299902, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
       propertyPath: leftStickVertical
@@ -362,9 +366,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b69e95fef1da87840850c2cfbeec0a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam1: {fileID: 0}
+  maxDistance: 2
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
   pickup: 101
   drop: 113
+  point: {fileID: 0}
+  objectToPickup: {fileID: 0}
+  childPosition: 0
 --- !u!1 &2051453866
 GameObject:
   m_ObjectHideFlags: 0
