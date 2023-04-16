@@ -1323,9 +1323,7 @@ MonoBehaviour:
     m_Bits: 2147483647
   pickup: 371
   drop: 372
-  point: {fileID: 6032858837758038075}
   objectToPickup: {fileID: 0}
-  childPosition: 5
 --- !u!114 &703892586
 MonoBehaviour:
   m_ObjectHideFlags: 0
