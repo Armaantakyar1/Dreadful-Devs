@@ -67,7 +67,7 @@ public class PlayerMovementController : MonoBehaviour
 
         float verticalRotation = rightStickInput.y * lookSensetivey;
         verticalRotStore += verticalRotation;
-        verticalRotStore = Mathf.Clamp(verticalRotStore, -50f, 75f);
+        verticalRotStore = Mathf.Clamp(verticalRotStore, -50f, 100f);
         playerUpperbody.transform.localRotation = Quaternion.Euler(verticalRotStore, 0f, 0f);
         camViewPoint.transform.localRotation = Quaternion.Euler(verticalRotStore, 0f, 0f);
     }
