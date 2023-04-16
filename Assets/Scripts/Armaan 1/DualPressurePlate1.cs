@@ -4,13 +4,7 @@ using UnityEngine;
 
 public class DualPressurePlate1 : MonoBehaviour
 {
-    PlatesManager manager;
-    // Start is called before the first frame update
-    void Start()
-    {
-        manager = GetComponent<PlatesManager>();
-    }
-
+    [SerializeField]PlatesManager manager;
     private void OnTriggerEnter(Collider other)
     {
         manager.Activated();
