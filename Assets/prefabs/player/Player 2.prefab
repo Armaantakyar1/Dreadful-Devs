@@ -1217,6 +1217,7 @@ Transform:
   - {fileID: 7617350725073241890}
   - {fileID: 2480550535453322000}
   - {fileID: 1537273638}
+  - {fileID: 6032858837758038075}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -1273,7 +1274,7 @@ MonoBehaviour:
   cam1: {fileID: 2480550536356705354}
   fireBig: 375
   fireSmall: 374
-  player: 
+  player: Player1
   scaleUpSfx: {fileID: 564315264436742117}
   scaleDownSfx: {fileID: 4519228897959131511}
 --- !u!136 &7881914498784188350
@@ -1322,7 +1323,9 @@ MonoBehaviour:
     m_Bits: 2147483647
   pickup: 371
   drop: 372
+  point: {fileID: 6032858837758038075}
   objectToPickup: {fileID: 0}
+  childPosition: 5
 --- !u!114 &703892586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2852,6 +2855,37 @@ Transform:
   - {fileID: 9092771599930703850}
   m_Father: {fileID: 8669652785016313246}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9215594465638407236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6032858837758038075}
+  m_Layer: 0
+  m_Name: point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6032858837758038075
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9215594465638407236}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.69, z: 0.93}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2730895431113402294}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2480550535529552818
 PrefabInstance:
