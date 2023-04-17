@@ -979,6 +979,59 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2480550535139804851, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
   m_PrefabInstance: {fileID: 703892577}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &249645829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 249645830}
+  - component: {fileID: 249645831}
+  m_Layer: 0
+  m_Name: VentDoor (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &249645830
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249645829}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.1690001, y: 2.3800018, z: -0.44899997}
+  m_LocalScale: {x: 1, y: 0.4, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1001603554}
+  m_Father: {fileID: 1801244009}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &249645831
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249645829}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4be45df653f919a4c8c6299e79486fbd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &264936292
 GameObject:
   m_ObjectHideFlags: 0
@@ -2510,7 +2563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlateSFX: {fileID: 481304392}
   plateanim: {fileID: 481304394}
-  ventdoor: {fileID: 1001603558}
+  ventdoor: {fileID: 249645831}
 --- !u!4 &481304398 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5398113192030963016, guid: ebdaa359b04927347b2195adeffeea9f, type: 3}
@@ -4176,14 +4229,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001603553}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.169, y: 2.38, z: -0.449}
-  m_LocalScale: {x: 0.48199952, y: 0.024099976, z: 0.48947048}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.009, y: 0, z: 0}
+  m_LocalScale: {x: 0.48131073, y: 0.20708, z: 0.48131073}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1615483856}
-  m_Father: {fileID: 1801244009}
-  m_RootOrder: 3
+  m_Father: {fileID: 249645830}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1001603555
 BoxCollider:
@@ -6507,7 +6560,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1615483855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.005, y: 52.8, z: 0}
+  m_LocalPosition: {x: -0.005, y: 27.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6874,7 +6927,7 @@ Transform:
   - {fileID: 1083203950}
   - {fileID: 1628281061}
   - {fileID: 1399553390}
-  - {fileID: 1001603554}
+  - {fileID: 249645830}
   - {fileID: 181363619}
   m_Father: {fileID: 704997110}
   m_RootOrder: 3
@@ -8122,7 +8175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4483898447810117149, guid: 6856418946a75db4093e5e5b81f30e65, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.67
+      value: 5.82
       objectReference: {fileID: 0}
     - target: {fileID: 4483898447810117149, guid: 6856418946a75db4093e5e5b81f30e65, type: 3}
       propertyPath: m_LocalRotation.w
