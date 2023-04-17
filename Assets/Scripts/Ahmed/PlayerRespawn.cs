@@ -16,7 +16,7 @@ public class PlayerRespawn : MonoBehaviour
             other.transform.position = respawnPoint.position;
             characterController.enabled = true;
         }
-        if (other.CompareTag("Player2"))
+        if (other.CompareTag("Player1"))
         {
             CharacterController characterController = other.GetComponent<CharacterController>();
             characterController.enabled = false;

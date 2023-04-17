@@ -1023,7 +1023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f22953eea8ba2874ca08e29c7e7685a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextscene: Armaan2
+  nextscene: Level 1
 --- !u!82 &1876990340
 AudioSource:
   m_ObjectHideFlags: 0

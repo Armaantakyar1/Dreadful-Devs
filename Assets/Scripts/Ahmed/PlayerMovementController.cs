@@ -27,10 +27,11 @@ public class PlayerMovementController : MonoBehaviour
     public Vector3 direction = Vector3.zero;
 
     Vector2 rightStickInput;
-    Vector3 movementDirection;
+    public Vector3 movementDirection;
 
     public Transform platform;
     float verticalRotStore;
+    public Vector3 velocity=Vector3.zero;
 
     private void Awake()
     {
@@ -47,13 +48,11 @@ public class PlayerMovementController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(!charCon.isGrounded)
+        movementDirection.y = velocity.y + (Physics.gravity.y * Time.fixedDeltaTime);
+        velocity.y += Physics.gravity.y * Time.fixedDeltaTime;
+        if (charCon.isGrounded&& velocity.y<0)
         {
-            movementDirection.y = movementDirection.y + (Physics.gravity.y * Time.fixedDeltaTime);
-        }
-        else
-        {
-            movementDirection.y = Physics.gravity.y * Time.fixedDeltaTime;      
+            velocity.y = 0;
         }
     }
 
@@ -94,7 +93,7 @@ public class PlayerMovementController : MonoBehaviour
         {
             if(Input.GetKeyDown(jump))
             {
-                movementDirection.y = jumpForce;
+                velocity.y = jumpForce;
                 Debug.Log("jump");
             }
         }
