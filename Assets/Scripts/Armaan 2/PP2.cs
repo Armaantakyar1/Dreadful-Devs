@@ -42,7 +42,7 @@ public class PP2 : MonoBehaviour
        // toManiplate.SetActive(true);
         plateanim.SetBool("Release", true);
         plateanim.SetBool("Press", false);
-        ventdoor.SetBool("Close", true);
+      //  ventdoor.SetBool("Close", true);
         ventdoor.SetBool("Open", false);
     }
 }
