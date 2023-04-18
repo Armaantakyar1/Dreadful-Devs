@@ -55,7 +55,12 @@ public class PlatformMover : MonoBehaviour
             attachedPlayer = other.gameObject.GetComponent<PlayerMovementController>();
    
         }
-        
+        if (other.transform.CompareTag("Player1"))
+        {
+            attachedPlayer = other.gameObject.GetComponent<PlayerMovementController>();
+
+        }
+
     }
 
 
@@ -66,6 +71,12 @@ public class PlatformMover : MonoBehaviour
             attachedPlayer.ZeroDirection();
             attachedPlayer = null;
          
+        }
+        if (other.transform.CompareTag("Player1"))
+        {
+            attachedPlayer.ZeroDirection();
+            attachedPlayer = null;
+
         }
 
     }
