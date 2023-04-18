@@ -6,18 +6,13 @@ public class PlatesManager : MonoBehaviour
 {
     [SerializeField] int currentlyPressed;
     [SerializeField] int max;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] GameObject toManipulate;
 
-    // Update is called once per frame
     void Update()
     {
         if (currentlyPressed == max)
         {
-
+            toManipulate.SetActive(true);
         }
     }
     public void Activated()

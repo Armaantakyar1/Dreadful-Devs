@@ -353,6 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 089a0056a2b4f4c42972bd684cb4a3b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlateSFX: {fileID: 0}
   targets: []
   animators: []
   enableObject: 1
