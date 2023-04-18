@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TriggerObjectManager : MonoBehaviour
 {
+    public AudioSource PlateSFX;
     public List<GameObject> targets = new List<GameObject>();
     public List<Animator> animators = new List<Animator>();
     [SerializeField] bool enableObject;
@@ -27,6 +28,7 @@ public class TriggerObjectManager : MonoBehaviour
         {
             Enable();
         }
+        PlateSFX.Play();
     }
     private void OnTriggerStay(Collider other)
     {
