@@ -220,6 +220,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &249158669 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4061041959641399096, guid: 6cdffd4c3c9f26641b6f25ffa698961c, type: 3}
+  m_PrefabInstance: {fileID: 3790572885334559541}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &249158670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249158669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 347164ed58fb4774882fa8f6897ab9e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunPrefab: {fileID: 1026225508753764, guid: 1b4bfa9bf495af248ae0086f9fb59042, type: 3}
+  gunInHand: {fileID: 1623983210}
 --- !u!1 &590013911
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,6 +559,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1623983210 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3790188843897951425, guid: 6cdffd4c3c9f26641b6f25ffa698961c, type: 3}
+  m_PrefabInstance: {fileID: 3790572885334559541}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1695116249
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,7 +924,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4415021838180146475, guid: 90ca95a69afcd6b41a0d483875776aa3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 90ca95a69afcd6b41a0d483875776aa3, type: 3}
 --- !u!1001 &3790572885334559541
 PrefabInstance:
@@ -957,5 +982,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Josh (player1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2725429193874668173, guid: 6cdffd4c3c9f26641b6f25ffa698961c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6cdffd4c3c9f26641b6f25ffa698961c, type: 3}

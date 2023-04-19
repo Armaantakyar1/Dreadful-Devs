@@ -5,41 +5,38 @@ using UnityEngine;
 
 public class GunDropAndPick : MonoBehaviour
 {
-    [SerializeField] Transform gunHoldPoint;
-    [SerializeField] Transform gun;
-    [SerializeField] Rigidbody gunBody;
-    [SerializeField] Collider gunCollider;
+    [SerializeField] GameObject gunPrefab;
+    [SerializeField] GameObject gunInHand;
+    GameObject newgameObject;
 
     float distanceBetweenGun;
-    bool pickedUp;
+    bool pickedUp= true;
 
    
 
     void DistanceFromGun()
     {
-        distanceBetweenGun = Vector3.Distance(transform.position, gun.position);
+        distanceBetweenGun = Vector3.Distance(transform.position, newgameObject.transform.position);
     }
     private void Update()
     {
-        DistanceFromGun();
-
-        if (!pickedUp && distanceBetweenGun < 3 && Input.GetKeyDown(KeyCode.JoystickButton3)) 
+        if(newgameObject != null)
         {
-            gunBody.isKinematic = true;
-            gunBody.useGravity = false;
-            gunCollider.enabled = false;
-            gunHoldPoint.parent = gun;
-            gunHoldPoint.position = gun.position;
-            pickedUp = true;
+            DistanceFromGun();
 
         }
         if(pickedUp && Input.GetKeyDown(KeyCode.JoystickButton3)) 
         { 
-            gunHoldPoint.DetachChildren();
-            gunBody.isKinematic = false;
-            gunBody.useGravity = true;
-            gunCollider.enabled = true;
+            newgameObject = Instantiate(gunPrefab, transform.position, Quaternion.identity);
+            gunInHand.gameObject.SetActive(false);
             pickedUp = false;
+        }
+        else if (!pickedUp && distanceBetweenGun < 2 && Input.GetKeyDown(KeyCode.JoystickButton3)) 
+        {
+            Destroy(newgameObject);
+            gunInHand.gameObject.SetActive(true);
+            pickedUp = true;
+
         }
     }
 }
