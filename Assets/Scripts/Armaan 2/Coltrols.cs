@@ -10,7 +10,7 @@ public class Coltrols : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.JoystickButton7))
         {
             if (controls.gameObject.activeSelf)
             {

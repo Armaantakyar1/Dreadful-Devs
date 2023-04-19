@@ -5,13 +5,33 @@ using UnityEngine;
 public class DualPressurePlate1 : MonoBehaviour
 {
     [SerializeField]PlatesManager manager;
+    [SerializeField]bool once;
     private void OnTriggerEnter(Collider other)
     {
-        manager.Activated();
+        if (once == false)
+        {
+            manager.Activated();
+            once = true;
+        }
+        
     }
-    
+    private void OnTriggerStay(Collider other)
+    {
+        if (once == false)
+        {
+            manager.Activated();
+            once = true;
+        }
+    }
+
+
     private void OnTriggerExit(Collider other)
     {
-        manager.Deactivated();
+        if (once == true)
+        {
+            manager.Deactivated();
+            once = false;
+        }
+        
     }
 }
