@@ -7,6 +7,7 @@ public class GunDropAndPick : MonoBehaviour
 {
     [SerializeField] GameObject gunPrefab;
     [SerializeField] GameObject gunInHand;
+    [SerializeField] KeyCode dropButton;
     GameObject newgameObject;
 
     float distanceBetweenGun;
@@ -25,13 +26,14 @@ public class GunDropAndPick : MonoBehaviour
             DistanceFromGun();
 
         }
-        if(pickedUp && Input.GetKeyDown(KeyCode.JoystickButton3)) 
+        if(pickedUp && Input.GetKeyDown(dropButton)) 
         { 
             newgameObject = Instantiate(gunPrefab, transform.position, Quaternion.identity);
             gunInHand.gameObject.SetActive(false);
             pickedUp = false;
         }
-        else if (!pickedUp && distanceBetweenGun < 2 && Input.GetKeyDown(KeyCode.JoystickButton3)) 
+        else if (!pickedUp && distanceBetweenGun < 2
+            && Input.GetKeyDown(dropButton)) 
         {
             Destroy(newgameObject);
             gunInHand.gameObject.SetActive(true);
