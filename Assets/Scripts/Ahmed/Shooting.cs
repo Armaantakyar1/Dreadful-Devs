@@ -19,13 +19,13 @@ public class Shooting : MonoBehaviour
     {
         if(Input.GetKeyDown(fireBig)) // rb on xbox game controller
         {
-           // scaleUpSfx.Play();
+            scaleUpSfx.Play();
             ScaleUpShoot();
             Debug.Log("fireBig");
         }
         if(Input.GetKeyDown(fireSmall)) // lb on xbox game controller
         {
-            //scaleDownSfx.Play();
+            scaleDownSfx.Play();
             ScaleDownShoot();
         }
     }

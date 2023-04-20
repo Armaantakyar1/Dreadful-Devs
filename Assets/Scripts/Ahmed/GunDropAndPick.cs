@@ -28,8 +28,9 @@ public class GunDropAndPick : MonoBehaviour
         }
         if(pickedUp && Input.GetKeyDown(dropButton)) 
         { 
-            newgameObject = Instantiate(gunPrefab, transform.position, Quaternion.identity);
+            newgameObject = Instantiate(gunPrefab, transform.position +  new Vector3(0,0,1), Quaternion.identity);
             gunInHand.gameObject.SetActive(false);
+            GetComponent<Shooting>().enabled = false;
             pickedUp = false;
         }
         else if (!pickedUp && distanceBetweenGun < 2
@@ -37,6 +38,7 @@ public class GunDropAndPick : MonoBehaviour
         {
             Destroy(newgameObject);
             gunInHand.gameObject.SetActive(true);
+            GetComponent<Shooting>().enabled = true;
             pickedUp = true;
 
         }
