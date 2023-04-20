@@ -5172,6 +5172,14 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.09014351
       objectReference: {fileID: 0}
+    - target: {fileID: 8358484686457347665, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
+      propertyPath: gunInHand
+      value: 
+      objectReference: {fileID: 210735150}
+    - target: {fileID: 8358484686457347665, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
+      propertyPath: gunPrefab
+      value: 
+      objectReference: {fileID: 1026225508753764, guid: 1b4bfa9bf495af248ae0086f9fb59042, type: 3}
     - target: {fileID: 8428247337320276492, guid: 6dc7e719233ab89489ea24c4ccb2e275, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -8563,6 +8571,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1750509590, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
+      propertyPath: gunInHand
+      value: 
+      objectReference: {fileID: 1309427352}
+    - target: {fileID: 1750509590, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
+      propertyPath: gunPrefab
+      value: 
+      objectReference: {fileID: 1026225508753764, guid: 1b4bfa9bf495af248ae0086f9fb59042, type: 3}
     - target: {fileID: 50977777199829489, guid: 768f65816aafce3479d44b10f1ad2ecf, type: 3}
       propertyPath: m_Layer
       value: 6
