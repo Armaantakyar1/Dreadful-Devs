@@ -18,7 +18,7 @@ public class ObjectPicker : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistance, layerMask))
         {
-            if (hit.collider.CompareTag("Object"))
+            if (hit.collider.CompareTag("Object") || hit.collider.CompareTag("Object2"))
             {
                 objectToPickup = hit.transform;
             }

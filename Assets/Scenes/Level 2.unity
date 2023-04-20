@@ -7400,6 +7400,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1234067163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1234067164}
+  m_Layer: 0
+  m_Name: Object respawn point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1234067164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234067163}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.05, y: 2.212, z: 3.09}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1249754575 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3423879537542994086, guid: 5a01c2800c0c3d246b4d6de91b14feb0, type: 3}
@@ -9027,7 +9058,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7798e94000396ae4a8aa6273a4f931d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnPoint: {fileID: 1041969740}
+  playerRespawnPoint: {fileID: 1041969740}
+  objectRespawnPoint1: {fileID: 1234067164}
+  objectRespawnPoint2: {fileID: 0}
 --- !u!65 &1815026395
 BoxCollider:
   m_ObjectHideFlags: 0
