@@ -9,6 +9,7 @@ public class EndPlayerPlate : MonoBehaviour
     public AudioSource PlateSFX;
     public Animator endplateanim;
     public string nextscene;
+    [SerializeField] CapsuleCollider capsuleCollider;
 
     private void OnTriggerEnter(Collider other)
     {

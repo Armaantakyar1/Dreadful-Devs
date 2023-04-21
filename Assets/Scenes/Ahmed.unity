@@ -588,7 +588,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 80, y: 3, z: 80}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1695116252
 MeshRenderer:
@@ -649,7 +649,7 @@ Transform:
   m_GameObject: {fileID: 1695116249}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.3241096, y: -23.3, z: 3.65}
-  m_LocalScale: {x: 80, y: 3, z: 80}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -670,6 +670,7 @@ MonoBehaviour:
   playerRespawnPoint: {fileID: 590013912}
   objectRespawnPoint1: {fileID: 590013912}
   objectRespawnPoint2: {fileID: 590013912}
+  boxCollider: {fileID: 1695116251}
 --- !u!1 &1870332073
 GameObject:
   m_ObjectHideFlags: 0

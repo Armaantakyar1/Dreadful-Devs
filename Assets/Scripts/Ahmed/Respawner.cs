@@ -8,6 +8,7 @@ public class Respawner : MonoBehaviour
     [SerializeField] Transform playerRespawnPoint;
     [SerializeField] Transform objectRespawnPoint1;
     [SerializeField] Transform objectRespawnPoint2;
+    [SerializeField] BoxCollider boxCollider;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -33,5 +34,22 @@ public class Respawner : MonoBehaviour
         {
             other.transform.position= objectRespawnPoint2.position;
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(transform.position + boxCollider.center , boxCollider.size);
+
+        Gizmos.color = new Color(1f, 0f, 0f, 0.3f);
+        Gizmos.DrawCube(transform.position + boxCollider.center, boxCollider.size);
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = new Color(1f, 1f, 0f, 1f);
+        Gizmos.DrawWireCube(transform.position + boxCollider.center , boxCollider.size);
+
+        Gizmos.color = new Color(1f, 1f, 0f, 0.3f);
+        Gizmos.DrawCube(transform.position + boxCollider.center, boxCollider.size);
     }
 }

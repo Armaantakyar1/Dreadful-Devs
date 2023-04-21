@@ -3778,6 +3778,7 @@ MonoBehaviour:
   PlateSFX: {fileID: 1358551626}
   endplateanim: {fileID: 1358551624}
   nextscene: Level 2
+  capsuleCollider: {fileID: 1358551628}
 --- !u!136 &1358551628
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3788,7 +3789,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.9797197
+  m_Radius: 1.04
   m_Height: 7.438026
   m_Direction: 1
   m_Center: {x: -0.018474465, y: 0.14414094, z: 0.019284671}
@@ -5150,7 +5151,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7798e94000396ae4a8aa6273a4f931d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnPoint: {fileID: 1592297853}
+  playerRespawnPoint: {fileID: 1592297853}
+  objectRespawnPoint1: {fileID: 0}
+  objectRespawnPoint2: {fileID: 0}
+  boxCollider: {fileID: 1786486660}
 --- !u!65 &1786486660
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5162,7 +5166,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 100, y: 3, z: 100}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1786486661
 MeshRenderer:
@@ -5223,7 +5227,7 @@ Transform:
   m_GameObject: {fileID: 1786486658}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.4, y: -13.3, z: 3.65}
-  m_LocalScale: {x: 100, y: 3, z: 100}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
