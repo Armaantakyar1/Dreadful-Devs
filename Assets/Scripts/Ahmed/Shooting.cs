@@ -49,15 +49,10 @@ public class Shooting : MonoBehaviour
             hit.transform.localScale -= new Vector3(.25f, .25f, .25f);
         }
     }
-    /*IEnumerator GrowGradually(RaycastHit hit)
+    private void OnDrawGizmos()
     {
-        Vector3 maxSize = new Vector3(.5f, .5f, .5f);
-        Vector3 scaleIncrement = new Vector3(0.01f, 0.01f, 0.01f);
-
-        while (hit.transform.localScale.x < maxSize.x && hit.transform.localScale.y < maxSize.y && hit.transform.localScale.z < maxSize.z)
-        {
-            hit.transform.localScale += scaleIncrement;
-            yield return new WaitForSeconds(0.01f);
-        }
-    }*/
+        Ray ray = cam1.ViewportPointToRay(new Vector3(.5f, .5f, 0f));
+        Gizmos.color = new Color(0f,1f,0f,0.5f);
+        Gizmos.DrawLine(ray.origin, ray.origin + ray.direction * 50f);
+    }
 }
