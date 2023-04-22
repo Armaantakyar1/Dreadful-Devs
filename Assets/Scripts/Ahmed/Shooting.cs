@@ -14,19 +14,24 @@ public class Shooting : MonoBehaviour
     [SerializeField] AudioSource scaleUpSfx;
     [SerializeField] AudioSource scaleDownSfx;
     [SerializeField] LayerMask layersToHit;
-
+    [SerializeField] Animator animator;
+    [SerializeField] string playerShootAnimation;
+    float delay = 0.1f;
     private void Update()
     {
         if(Input.GetKeyDown(fireBig)) // rb on xbox game controller
         {
             scaleUpSfx.Play();
             ScaleUpShoot();
-            Debug.Log("fireBig");
+            animator.SetBool(playerShootAnimation, true);
+            StartCoroutine(ResetTriggerAfterDelay(delay));
         }
         if(Input.GetKeyDown(fireSmall)) // lb on xbox game controller
         {
             scaleDownSfx.Play();
             ScaleDownShoot();
+            animator.SetBool(playerShootAnimation, true);
+            StartCoroutine(ResetTriggerAfterDelay(delay));
         }
     }
     void ScaleUpShoot()
@@ -48,6 +53,11 @@ public class Shooting : MonoBehaviour
         {
             hit.transform.localScale -= new Vector3(.25f, .25f, .25f);
         }
+    }
+    IEnumerator ResetTriggerAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        animator.SetBool(playerShootAnimation, false);
     }
     private void OnDrawGizmos()
     {
