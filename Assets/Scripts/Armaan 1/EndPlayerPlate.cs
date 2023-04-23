@@ -9,20 +9,25 @@ public class EndPlayerPlate : MonoBehaviour
     public AudioSource PlateSFX;
     public Animator endplateanim;
     public string nextscene;
-    [SerializeField] CapsuleCollider capsuleCollider;
+    
 
     private void OnTriggerEnter(Collider other)
     {
-        playersOnPlate++;
-        PlateSFX.Play();
-        endplateanim.SetBool("Press",true);
         if (playersOnPlate == 2)
         {
             SceneManager.LoadScene(nextscene);
         }
+        playersOnPlate++;
+        PlateSFX.Play();
+        endplateanim.SetBool("Press",true);
+        
     }
     private void OnTriggerExit(Collider other)
     {
+        if (playersOnPlate == 2)
+        {
+            SceneManager.LoadScene(nextscene);
+        }
         endplateanim.SetBool("Press", false);
         endplateanim.SetBool("Release", true);
         playersOnPlate--;
