@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1285708770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1285708771}
+  m_Layer: 6
+  m_Name: point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1285708771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285708770}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3679555836483593602}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &105929195403688282
 GameObject:
   m_ObjectHideFlags: 0
@@ -1369,6 +1400,7 @@ GameObject:
   - component: {fileID: 249158670}
   - component: {fileID: 58844574}
   - component: {fileID: 58844573}
+  - component: {fileID: 257498459}
   m_Layer: 6
   m_Name: Josh (player1)
   m_TagString: Player1
@@ -1398,6 +1430,7 @@ Transform:
   - {fileID: 8081694545996868540}
   - {fileID: 9169392911486256406}
   - {fileID: 3790572884571228833}
+  - {fileID: 1285708771}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1454,12 +1487,12 @@ MonoBehaviour:
   maxDistance: 2
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
-  pickup: 0
-  drop: 0
-  point: {fileID: 0}
+    m_Bits: 2147483647
+  pickup: 351
+  drop: 352
+  point: {fileID: 1285708771}
   objectToPickup: {fileID: 0}
-  childPosition: 0
+  childPosition: 11
 --- !u!114 &3790572886260799266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1717,6 +1750,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &257498459
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4061041959641399096}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4248230411342490396
 GameObject:
   m_ObjectHideFlags: 0

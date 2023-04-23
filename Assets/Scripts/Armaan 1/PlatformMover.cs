@@ -12,7 +12,7 @@ public class PlatformMover : MonoBehaviour
     private Vector3 direction;
     private bool movingToEnd = true;
     [SerializeField] PlayerMovementController attachedPlayer;
-    [SerializeField] Player2MovementController attachedPlayer2;
+   
 
     private void Start()
     {
@@ -50,7 +50,7 @@ public class PlatformMover : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.transform.CompareTag("Player"))
+        if (other.transform.CompareTag("Player2"))
         {
             attachedPlayer = other.gameObject.GetComponent<PlayerMovementController>();
    
@@ -66,7 +66,7 @@ public class PlatformMover : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.transform.CompareTag("Player"))
+        if (other.transform.CompareTag("Player2"))
         {
             attachedPlayer.ZeroDirection();
             attachedPlayer = null;
