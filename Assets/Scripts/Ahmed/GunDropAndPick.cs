@@ -28,7 +28,7 @@ public class GunDropAndPick : MonoBehaviour
         }
         if(pickedUp && Input.GetKeyDown(dropButton)) 
         { 
-            newgameObject = Instantiate(gunPrefab, transform.position +  new Vector3(0,0,1), Quaternion.identity);
+            newgameObject = Instantiate(gunPrefab, transform.position + transform.forward * 2f , Quaternion.identity);
             gunInHand.gameObject.SetActive(false);
             GetComponent<Shooting>().enabled = false;
             pickedUp = false;
