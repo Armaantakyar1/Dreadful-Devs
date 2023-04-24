@@ -10,7 +10,7 @@ public class PlatesManager : MonoBehaviour
 
     void Update()
     {
-        if (currentlyPressed == max)
+        if (currentlyPressed >= max)
         {
             toManipulate.SetActive(true);
         }

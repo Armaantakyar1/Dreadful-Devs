@@ -69,7 +69,7 @@ public class TriggerObjectManager : MonoBehaviour
 
         foreach (Animator animator in animators)
         {
-            animator.enabled = enableAnimation;
+            animator.SetBool("Open",enableAnimation);
         }
     }
     void disable()
@@ -81,7 +81,7 @@ public class TriggerObjectManager : MonoBehaviour
 
         foreach (Animator animator in animators)
         {
-            animator.enabled = disableAnimation;
+            animator.SetBool("Close", disableAnimation);
         }
     }
 }
