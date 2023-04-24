@@ -22,11 +22,11 @@ public class PressurePlate : MonoBehaviour
         {
             toManiplate.SetActive(true);
         }
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player1"))
         {
             toManiplate.SetActive(true);
         }
-        if (other.CompareTag("Player1"))
+        if (other.CompareTag("Player2"))
         {
             toManiplate.SetActive(true);
         }

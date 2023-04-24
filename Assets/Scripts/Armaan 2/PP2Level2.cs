@@ -28,12 +28,17 @@ public class PP2Level2 : MonoBehaviour
             ventdoor.SetBool("Open", true);
             ventdoor2.SetBool("Open", true);
         }
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Object2"))
         {
             ventdoor.SetBool("Open", true);
             ventdoor2.SetBool("Open", true);
         }
         if (other.CompareTag("Player1"))
+        {
+            ventdoor.SetBool("Open", true);
+            ventdoor2.SetBool("Open", true);
+        }
+        if (other.CompareTag("Player2"))
         {
             //toManiplate.SetActive(false);
             ventdoor.SetBool("Open", true);

@@ -9,7 +9,7 @@ public class BigActivator : MonoBehaviour
     [SerializeField] List<Shooting> gun = new List<Shooting>();
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player2"))
         {
             ActivateObjects();
         }
