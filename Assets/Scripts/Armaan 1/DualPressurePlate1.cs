@@ -6,22 +6,30 @@ public class DualPressurePlate1 : MonoBehaviour
 {
     [SerializeField]PlatesManager manager;
     [SerializeField]bool once;
+    
+
     private void OnTriggerEnter(Collider other)
     {
-        if (once == false)
-        {
-            manager.Activated();
-            once = true;
-        }
+        
+            if (once == false)
+            {
+                manager.Activated();
+                once = true;
+            }
+        
+        
         
     }
     private void OnTriggerStay(Collider other)
     {
-        if (once == false)
-        {
-            manager.Activated();
-            once = true;
-        }
+        
+        
+            if (once == false)
+            {
+                manager.Activated();
+                once = true;
+            }
+        
     }
 
 

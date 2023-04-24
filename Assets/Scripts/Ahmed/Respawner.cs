@@ -12,7 +12,7 @@ public class Respawner : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player2"))
         {
             CharacterController characterController = other.GetComponent<CharacterController>();
             characterController.enabled = false;
