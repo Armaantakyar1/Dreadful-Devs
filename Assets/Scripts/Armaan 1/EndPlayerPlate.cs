@@ -13,11 +13,12 @@ public class EndPlayerPlate : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        playersOnPlate++;
         if (playersOnPlate == 2)
         {
             SceneManager.LoadScene(nextscene);
         }
-        playersOnPlate++;
+        
         PlateSFX.Play();
         endplateanim.SetBool("Press",true);
         

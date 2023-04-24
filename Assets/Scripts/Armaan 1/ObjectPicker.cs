@@ -33,7 +33,7 @@ public class ObjectPicker : MonoBehaviour
             objectToPickup.SetParent(transform);
             objectToPickup.transform.position = point.position;
             objectToPickup.GetComponent<Rigidbody>().isKinematic = true;
-            objectToPickup = null;
+            
         }
         
         if (Input.GetKeyDown(drop))
