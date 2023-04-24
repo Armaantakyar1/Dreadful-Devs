@@ -29,10 +29,10 @@ public class DualPressurePlate1 : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag(tag1) || other.CompareTag(tag2) || other.CompareTag(tag3) || other.CompareTag(tag4))
+        if (once==false)
         {
 
-            if (once == false)
+            if (other.CompareTag(tag1) || other.CompareTag(tag2) || other.CompareTag(tag3) || other.CompareTag(tag4))
             {
                 manager.Activated();
                 once = true;
@@ -48,7 +48,7 @@ public class DualPressurePlate1 : MonoBehaviour
         {
             if (once == true)
             {
-                manager.Activated();
+                manager.Deactivated();
                 once = false;
             }
         }
