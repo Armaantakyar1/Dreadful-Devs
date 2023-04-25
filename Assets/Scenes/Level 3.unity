@@ -3400,8 +3400,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 2129844248}
   once: 0
-  tag1: 
-  tag2: 
+  tag1: Player1
+  tag2: Player2
   tag3: 
   tag4: 
 --- !u!1 &299548172
@@ -7645,8 +7645,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 2129844248}
   once: 0
-  tag1: 
-  tag2: 
+  tag1: Player1
+  tag2: Player2
   tag3: 
   tag4: 
 --- !u!1 &696795838
