@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 4483898447810117147}
   - component: {fileID: 4483898447810117146}
   - component: {fileID: 4483898447810117145}
+  - component: {fileID: -2580558849803277032}
   m_Layer: 0
   m_Name: GameCube
   m_TagString: Pickup
@@ -209,3 +210,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-2580558849803277032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483898447810117144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e9a6e535d4f47940a1c7391cf19b742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetScale: 2
+  newTag: Object
+  oldTag: Pickup

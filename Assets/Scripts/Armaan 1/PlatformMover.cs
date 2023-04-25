@@ -22,6 +22,7 @@ public class PlatformMover : MonoBehaviour
 
     private void Update()
     {
+        
         if (movingToEnd)
         {
             if (Vector3.Distance(transform.position, endPoint.position) < 0.1f)

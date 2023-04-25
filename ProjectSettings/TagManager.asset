@@ -12,6 +12,7 @@ TagManager:
   - Player2
   - Object
   - Object2
+  - Bulb
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Ignore player2
   - Gun 1
   - Gun 2
-  - 
+  - barrier
   - 
   - 
   - 
