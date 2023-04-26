@@ -3256,26 +3256,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: ebe4d4d2e4dba3e4fafb8db9e35fa9cd, type: 3}
   m_PrefabInstance: {fileID: 298984346}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &298984349 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: -6057140222963153312, guid: ebe4d4d2e4dba3e4fafb8db9e35fa9cd, type: 3}
-  m_PrefabInstance: {fileID: 298984346}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &298984350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298984348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4e57479d60777642b3ece2759fca084, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlateSFX: {fileID: 298984351}
-  endplateanim: {fileID: 298984349}
-  nextscene: 
 --- !u!82 &298984351
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7501,26 +7481,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: ebe4d4d2e4dba3e4fafb8db9e35fa9cd, type: 3}
   m_PrefabInstance: {fileID: 688782353}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &688782356 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: -6057140222963153312, guid: ebe4d4d2e4dba3e4fafb8db9e35fa9cd, type: 3}
-  m_PrefabInstance: {fileID: 688782353}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &688782357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 688782355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4e57479d60777642b3ece2759fca084, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlateSFX: {fileID: 688782358}
-  endplateanim: {fileID: 688782356}
-  nextscene: 
 --- !u!82 &688782358
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19805,6 +19765,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1408118950601582451, guid: e9e0b4ef430adc0468c574147664ad43, type: 3}
+      propertyPath: door
+      value: dooropen
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408118950601582451, guid: e9e0b4ef430adc0468c574147664ad43, type: 3}
       propertyPath: animator.Array.data[0]
       value: 
       objectReference: {fileID: 1479228999}
@@ -19815,6 +19779,10 @@ PrefabInstance:
     - target: {fileID: 1408118950601582452, guid: e9e0b4ef430adc0468c574147664ad43, type: 3}
       propertyPath: m_Name
       value: doorDisable
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408118950601582452, guid: e9e0b4ef430adc0468c574147664ad43, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9e0b4ef430adc0468c574147664ad43, type: 3}

@@ -6,6 +6,7 @@ public class Disabledoor : MonoBehaviour
 {
     public List<GameObject> targets = new List<GameObject>();
     public List<Animator> animator = new List<Animator>();
+    [SerializeField] string door;
    
     void Start()
     {
@@ -17,7 +18,7 @@ public class Disabledoor : MonoBehaviour
     {
         foreach (Animator animator in animator)
         {
-            animator.SetBool("dooropen", true);
+            animator.SetBool(door, true);
         }
     }
 }
