@@ -80,9 +80,9 @@ public class PlayerMovementController : MonoBehaviour
         float horizontalInput = Input.GetAxisRaw(leftStickHorizontal);
         float verticalInput = Input.GetAxisRaw(leftStickVertical);
 
-        Vector3 forwardDirection = playerUpperbody.forward;
+        Vector3 forwardDirection = transform.forward;
         forwardDirection.y = 0f;
-        movementDirection = (horizontalInput * playerUpperbody.right + verticalInput * forwardDirection).normalized;
+        movementDirection = (horizontalInput * transform.right + verticalInput * forwardDirection).normalized;
 
         movementDirection.y = yStore;
         charCon.Move((movementDirection * moveSpeed +direction)*Time.deltaTime);
