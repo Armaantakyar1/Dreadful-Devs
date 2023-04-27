@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PressurePlate : MonoBehaviour
+public class Level1PP : MonoBehaviour
 {
-    public GameObject toManiplate;
     public AudioSource PlateSFX;
     public Animator plateanim;
+    public Animator Stairs;
 
 
     private void OnTriggerEnter(Collider other)
     {
-        toManiplate.SetActive(true);
+        Stairs.SetBool("up", true);
         plateanim.SetBool("Press", true);
         PlateSFX.Play();
     }
@@ -19,22 +19,21 @@ public class PressurePlate : MonoBehaviour
     {
         if (other.CompareTag("Object") || other.CompareTag("Object2"))
         {
-            toManiplate.SetActive(true);
+            Stairs.SetBool("up", true);
         }
         if (other.CompareTag("Player1"))
         {
-            toManiplate.SetActive(true);
+            Stairs.SetBool("up", true);
         }
         if (other.CompareTag("Player2"))
         {
-            toManiplate.SetActive(true);
+            Stairs.SetBool("up", true);
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        toManiplate.SetActive(false);
+        Stairs.SetBool("up", false);
         plateanim.SetBool("Release", true);
         plateanim.SetBool("Press", false);
     }
-
 }
