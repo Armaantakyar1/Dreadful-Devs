@@ -13,5 +13,11 @@ public class ObjectSetter : MonoBehaviour
         {
             gameObject.tag = newTag;
         }
+        else
+        {
+
+            gameObject.tag = oldTag;
+
+        }
     }
 }
