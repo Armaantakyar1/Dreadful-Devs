@@ -16,24 +16,38 @@ public class Shooting : MonoBehaviour
     [SerializeField] LayerMask layersToHit;
     [SerializeField] Animator animator;
     [SerializeField] string playerShootAnimation;
-    float delay = 0.1f;
+    [SerializeField] GameObject bulletBig;
+    [SerializeField] GameObject bulletSmall;
+    [SerializeField] Transform gun;
+    float delay = 0.3f;
     private void Update()
     {
         if(Input.GetKeyDown(fireBig)) // rb on xbox game controller
         {
+            BulletInstantiate(bulletBig);
             scaleUpSfx.Play();
             ScaleUpShoot();
             animator.SetBool(playerShootAnimation, true);
             StartCoroutine(ResetTriggerAfterDelay(delay));
         }
-        if(Input.GetKeyDown(fireSmall)) // lb on xbox game controller
+        if (Input.GetKeyDown(fireSmall)) // lb on xbox game controller
         {
+            BulletInstantiate(bulletSmall);
             scaleDownSfx.Play();
             ScaleDownShoot();
             animator.SetBool(playerShootAnimation, true);
             StartCoroutine(ResetTriggerAfterDelay(delay));
         }
     }
+
+    private void BulletInstantiate(GameObject bullet)
+    {
+        Ray ray = cam1.ViewportPointToRay(new Vector3(.5f, .5f, 0f));
+        Vector3 targetPos = ray.origin + ray.direction * 50f;
+        GameObject bult = Instantiate(bullet, gun.position, Quaternion.identity);
+        bult.GetComponent<Rigidbody>().velocity = (targetPos - gun.position).normalized * 100f;
+    }
+
     void ScaleUpShoot()
     {
         Ray ray = cam1.ViewportPointToRay(new Vector3(.5f, .5f, 0f));
@@ -56,7 +70,7 @@ public class Shooting : MonoBehaviour
     }
     IEnumerator ResetTriggerAfterDelay(float delay)
     {
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSeconds(delay); 
         animator.SetBool(playerShootAnimation, false);
     }
     private void OnDrawGizmos()

@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &167177544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 167177545}
+  m_Layer: 7
+  m_Name: bulletPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &167177545
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167177544}
+  m_LocalRotation: {x: -0.05697878, y: -0.33812812, z: -0.0035046726, w: 0.93936706}
+  m_LocalPosition: {x: -0.431, y: 0.501, z: 0.711}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1304840161217112183}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1283107240
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,6 +671,9 @@ MonoBehaviour:
     m_Bits: 65
   animator: {fileID: 814120776}
   playerShootAnimation: Shoot2
+  bulletBig: {fileID: 6574406337994243327, guid: 3f6cd8580863bca47a598608e009a93c, type: 3}
+  bulletSmall: {fileID: 6574406337994243327, guid: 2fcc2291c6e3abd42a986620a654ebcb, type: 3}
+  gun: {fileID: 167177545}
 --- !u!114 &3174250923170815502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1176,7 +1210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3174250924490920922}
   - component: {fileID: 814120776}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: GunHoldPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1407,6 +1441,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2385808816367711397}
+  - {fileID: 167177545}
   m_Father: {fileID: 7081202020413344754}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3293,7 +3328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1026225508753764, guid: 1b4bfa9bf495af248ae0086f9fb59042, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1910525432426978, guid: 1b4bfa9bf495af248ae0086f9fb59042, type: 3}
       propertyPath: m_Layer
