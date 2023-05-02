@@ -12,12 +12,17 @@ public class PlatformMover : MonoBehaviour
     private Vector3 direction;
     private bool movingToEnd = true;
     [SerializeField] PlayerMovementController attachedPlayer;
-   
 
+    private void OnEnable()
+    {
+        attachedPlayer.ZeroDirection();
+        attachedPlayer = null;
+
+    }
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        attachedPlayer = null;
+        
         direction = (endPoint.position - startPoint.position).normalized;
     }
 
@@ -46,7 +51,7 @@ public class PlatformMover : MonoBehaviour
         {
             attachedPlayer.direction = rb.velocity;
         }
-        attachedPlayer = null;
+        
     }
     
     private void OnTriggerEnter(Collider other)
@@ -62,8 +67,9 @@ public class PlatformMover : MonoBehaviour
             attachedPlayer = other.gameObject.GetComponent<PlayerMovementController>();
 
         }
-       
+        
     }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.transform.CompareTag("Player2"))
