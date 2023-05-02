@@ -94,7 +94,7 @@ public class PlayerMovementController : MonoBehaviour
             if(Input.GetKeyDown(jump))
             {
                 velocity.y = jumpForce;
-                Debug.Log("jump");
+                
             }
         }
     }

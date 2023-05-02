@@ -11,11 +11,6 @@ public class ObjectPicker : MonoBehaviour
     [SerializeField] Transform point;
     [SerializeField] Transform objectToPickup;
     [SerializeField] int childPosition;
-    [SerializeField] PlayerTracker tracker;
-    private void Start()
-    {
-        tracker = GetComponent<PlayerTracker>();
-    }
 
     void Update()
     {
@@ -37,18 +32,22 @@ public class ObjectPicker : MonoBehaviour
             objectToPickup.SetParent(transform);
             objectToPickup.transform.position = point.position;
             objectToPickup.GetComponent<Rigidbody>().isKinematic = true;
-            tracker.SetLineColor(Color.blue);
+            
         }
         
         if (Input.GetKeyDown(drop))
         {
             
             Transform carriedObject = transform.GetChild(childPosition);
+            if (carriedObject == null)
+            {
+                return;
+            }
             if (carriedObject != null)
             {
                 carriedObject.SetParent(null);
                 carriedObject.GetComponent<Rigidbody>().isKinematic = false;
-                tracker.ResetColor();
+                
             }
         }
 
