@@ -1698,6 +1698,7 @@ MonoBehaviour:
   objectRespawnPoint1: {fileID: 23671305}
   objectRespawnPoint2: {fileID: 817427616}
   boxCollider: {fileID: 95040662}
+  player: {fileID: 0}
 --- !u!65 &95040662
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16651,7 +16652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400062, guid: 66688fab7593097498352043fc2bf099, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.717
+      value: 0.915
       objectReference: {fileID: 0}
     - target: {fileID: 400062, guid: 66688fab7593097498352043fc2bf099, type: 3}
       propertyPath: m_LocalRotation.w
