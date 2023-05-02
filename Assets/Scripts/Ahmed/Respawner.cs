@@ -9,6 +9,7 @@ public class Respawner : MonoBehaviour
     [SerializeField] Transform objectRespawnPoint1;
     [SerializeField] Transform objectRespawnPoint2;
     [SerializeField] BoxCollider boxCollider;
+    [SerializeField] PlayerMovementController player;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,6 +19,7 @@ public class Respawner : MonoBehaviour
             characterController.enabled = false;
             other.transform.position = playerRespawnPoint.position;
             characterController.enabled = true;
+            player.ZeroDirection();
         }
         if (other.CompareTag("Player1"))
         {
@@ -25,6 +27,7 @@ public class Respawner : MonoBehaviour
             characterController.enabled = false;
             other.transform.position = playerRespawnPoint.position;
             characterController.enabled = true;
+            player.ZeroDirection();
         }
         if(other.CompareTag("Object") || other.CompareTag("Pickup"))
         {
