@@ -375,7 +375,7 @@ MonoBehaviour:
   disableObject: 0
   enableAnimation: 1
   disableAnimation: 0
-  pickup: Pickup
+  pickup: Object2
   Object: Object
   player: Player1
   player1: Player2
@@ -398,7 +398,7 @@ MonoBehaviour:
   disableObject: 1
   enableAnimation: 0
   disableAnimation: 1
-  pickup: Pickup
+  pickup: Object2
   Object: Object
   player: Player1
   player1: Player2
@@ -16389,7 +16389,7 @@ MonoBehaviour:
   disableObject: 0
   enableAnimation: 1
   disableAnimation: 0
-  pickup: Pickup
+  pickup: Object2
   Object: Object
   player: Player1
   player1: Player2
@@ -16412,7 +16412,7 @@ MonoBehaviour:
   disableObject: 1
   enableAnimation: 0
   disableAnimation: 1
-  pickup: Pickup
+  pickup: Object2
   Object: Object
   player: Player1
   player1: Player2
@@ -17964,7 +17964,7 @@ MonoBehaviour:
   disableObject: 0
   enableAnimation: 1
   disableAnimation: 0
-  pickup: Pickup
+  pickup: Object2
   Object: Object
   player: Player1
   player1: Player2
@@ -17987,7 +17987,7 @@ MonoBehaviour:
   disableObject: 1
   enableAnimation: 0
   disableAnimation: 1
-  pickup: Pickup
+  pickup: Object2
   Object: Object
   player: Player1
   player1: Player2
@@ -21841,7 +21841,7 @@ MonoBehaviour:
   disableObject: 0
   enableAnimation: 1
   disableAnimation: 0
-  pickup: Pickup
+  pickup: Object2
   Object: Object
   player: Player1
   player1: Player2
@@ -21864,7 +21864,7 @@ MonoBehaviour:
   disableObject: 1
   enableAnimation: 0
   disableAnimation: 1
-  pickup: Pickup
+  pickup: Object2
   Object: Object
   player: Player1
   player1: Player2
