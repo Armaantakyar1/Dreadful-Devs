@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjectPicker : MonoBehaviour
 {
-    [SerializeField] private float maxDistance = 2f;
+    [SerializeField] private float maxDistance = 5f;
     [SerializeField] private LayerMask layerMask;
     [SerializeField] KeyCode pickup;
     [SerializeField] KeyCode drop;
@@ -39,10 +39,7 @@ public class ObjectPicker : MonoBehaviour
         {
             
             Transform carriedObject = transform.GetChild(childPosition);
-            if (carriedObject == null)
-            {
-                return;
-            }
+
             if (carriedObject != null)
             {
                 carriedObject.SetParent(null);
