@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TriggerObjectManager : MonoBehaviour
 {
-    public AudioSource PlateSFX;
+    
     public List<GameObject> targets = new List<GameObject>();
     public List<Animator> animators = new List<Animator>();
     [SerializeField] bool enableObject;
@@ -12,11 +12,12 @@ public class TriggerObjectManager : MonoBehaviour
     [SerializeField] bool enableAnimation;
     [SerializeField] bool disableAnimation;
     [SerializeField] string pickup;
+    [SerializeField] string Object;
     [SerializeField] string player;
     [SerializeField] string player1;
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(pickup))
+        if (other.CompareTag(pickup) || other.CompareTag(Object))
         {
             Enable();
         }
@@ -28,7 +29,7 @@ public class TriggerObjectManager : MonoBehaviour
         {
             Enable();
         }
-        PlateSFX.Play();
+   
     }
     private void OnTriggerStay(Collider other)
     {
