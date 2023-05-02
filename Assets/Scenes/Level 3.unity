@@ -3989,6 +3989,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: ebe4d4d2e4dba3e4fafb8db9e35fa9cd, type: 3}
   m_PrefabInstance: {fileID: 298984346}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &298984349 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: -6057140222963153312, guid: ebe4d4d2e4dba3e4fafb8db9e35fa9cd, type: 3}
+  m_PrefabInstance: {fileID: 298984346}
+  m_PrefabAsset: {fileID: 0}
 --- !u!82 &298984351
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4117,6 +4122,20 @@ MonoBehaviour:
   tag2: Player2
   tag3: 
   tag4: 
+--- !u!114 &298984354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298984348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639f50c66ec491848aa1ff6afbf71154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlateSFX: {fileID: 298984351}
+  plateanim: {fileID: 298984349}
 --- !u!1 &312257398
 GameObject:
   m_ObjectHideFlags: 0
@@ -8738,6 +8757,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: ebe4d4d2e4dba3e4fafb8db9e35fa9cd, type: 3}
   m_PrefabInstance: {fileID: 688782353}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &688782356 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: -6057140222963153312, guid: ebe4d4d2e4dba3e4fafb8db9e35fa9cd, type: 3}
+  m_PrefabInstance: {fileID: 688782353}
+  m_PrefabAsset: {fileID: 0}
 --- !u!82 &688782358
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8866,6 +8890,20 @@ MonoBehaviour:
   tag2: Player2
   tag3: 
   tag4: 
+--- !u!114 &688782361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688782355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639f50c66ec491848aa1ff6afbf71154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlateSFX: {fileID: 688782358}
+  plateanim: {fileID: 688782356}
 --- !u!1 &696795838
 GameObject:
   m_ObjectHideFlags: 0
