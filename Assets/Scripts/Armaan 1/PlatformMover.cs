@@ -13,12 +13,12 @@ public class PlatformMover : MonoBehaviour
     private bool movingToEnd = true;
     [SerializeField] PlayerMovementController attachedPlayer;
 
-    private void OnEnable()
+    private void OnDisable()
     {
         attachedPlayer.ZeroDirection();
         attachedPlayer = null;
-
     }
+   
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
